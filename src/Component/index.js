@@ -2,7 +2,7 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Switch, HashRouter as Router} from 'react-router-dom'
-import App from './Component/App';
+import App from './App';
 const routing = (
     <Router>
         <Switch>
