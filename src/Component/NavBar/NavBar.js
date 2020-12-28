@@ -6,17 +6,17 @@ export default function NavBar() {
         <div>
             <div className="navbar">
                 <div className="navbar__first">
-                    <div className="navbar__first_elmeant el-1">
+                    <div className="navbar__first_element el-1">
                         <img src={logo} alt="" />
                     </div>
-                    <div className="navbar__first_elmeant el-2">
+                    <div className="navbar__first_element el-2">
                         <h1>SARKEETT</h1>
-                    </div>    
+                    </div>
                 </div>
                 <div className="navbar__last">
-                    <div className="navbar__last__elmeant">
+                    <div className="navbar__last__element">
                         <button className="button">
-                            
+                            <p><b>Sign In / Sign up</b></p>
                         </button>
                     </div>
                 </div>
