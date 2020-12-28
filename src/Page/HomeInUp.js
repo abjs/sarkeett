@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../Component/Header/Header'
+import NavBar from '../Component/NavBar/NavBar'
 export default function HomeInUp() {
     return (
         <div>
-            <Header/>
+            <NavBar/>
         </div>
     )
 }

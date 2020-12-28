@@ -1,4 +1,3 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Switch, HashRouter as Router} from 'react-router-dom'
