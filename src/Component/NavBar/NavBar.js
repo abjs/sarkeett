@@ -9,9 +9,16 @@ export default function NavBar() {
                     <div className="navbar__first_elmeant el-1">
                         <img src={logo} alt="" />
                     </div>
-                    <div className="navbar__first_elmeant el-1">
+                    <div className="navbar__first_elmeant el-2">
                         <h1>SARKEETT</h1>
                     </div>    
+                </div>
+                <div className="navbar__last">
+                    <div className="navbar__last__elmeant">
+                        <button className="button">
+                            
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
