@@ -2,11 +2,14 @@ import React from 'react'
 // import './App.css';
 // import HomeInUp from './Page/HomeInUp/HomeInUp'
 // import LoginForm from './Component/LoginForm/LoginForm'
-import Settings from './Page/Settings/Settings'
+// import Settings from './Page/Settings/Settings'
+import Page from './Page/Page'
 // import Profile from './Profile'
 export default function App() {
   return (
     <div>
+      {/* only for deployment */}
+      <Page/>
       {/* <HomeInUp/> */}
       {/* <LoginForm/> */}
       {/* <Profile /> */}
@@ -16,7 +19,7 @@ export default function App() {
       {/* Feed */}
       {/* Explore  */}
       {/* Profile */}
-      <Settings/>
+      {/* <Settings/> */}
       {/* Chat  */}
       {/* Post */}
     </div>
