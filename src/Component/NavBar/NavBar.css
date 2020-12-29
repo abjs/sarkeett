@@ -9,18 +9,25 @@
     background-color:white;
     
 }
-.button{
+.button__nav{
     border: 5px solid black;
     border-radius: 5px;
+    height: 60px;
     padding: 10px;
     font-size: 17px;  
     /* margin:10px;  */
     margin-right: 20px;
     border-radius:20px;
+    align-items: center;
+    font-weight: bold;
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
-.button:hover{
-    font-size: 20px;  
+
+.button__nav:hover{
+    font-size: 20px;
+    background-color: #39FF14;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-weight: bolder;
 }

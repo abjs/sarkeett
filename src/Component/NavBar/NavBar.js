@@ -15,8 +15,8 @@ export default function NavBar() {
                 </div>
                 <div className="navbar__last">
                     <div className="navbar__last__element">
-                        <button className="button">
-                            <p><b>Sign In / Sign up</b></p>
+                        <button className="button__nav">
+                            <spam className="spbtnnav">Sign In / Sign up</spam>
                         </button>
                     </div>
                 </div>

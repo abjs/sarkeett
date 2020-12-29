@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../Component/NavBar/NavBar'
+import NavBar from '../../Component/NavBar/NavBar'
 import background_image from './background.png'
 import './HomeInUp.css'
 export default function HomeInUp() {
@@ -14,3 +14,5 @@ export default function HomeInUp() {
         </div>
     )
 }
+
+
