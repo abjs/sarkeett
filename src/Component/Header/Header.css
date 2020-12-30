@@ -1,0 +1,15 @@
+.Header{
+    display: flex;
+    height: 9vh;
+    background-color: white;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.Header-items >img{
+    height: 15vh;
+    padding-top: 4vh;
+    align-items: center;
+}
