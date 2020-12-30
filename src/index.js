@@ -15,4 +15,4 @@ const routing = (
     </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'));
-document.title ="Home"
+// document.title ="Home"

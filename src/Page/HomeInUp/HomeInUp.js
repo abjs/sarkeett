@@ -3,6 +3,7 @@ import NavBar from '../../Component/NavBar/NavBar'
 import background_image from './background.png'
 import './HomeInUp.css'
 export default function HomeInUp() {
+    document.title ="Home"
     return (
         <div className="HomeInUp">
             <NavBar/>
