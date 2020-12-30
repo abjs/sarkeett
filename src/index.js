@@ -5,6 +5,7 @@ import Settings from './Page/Settings/Settings'
 import {Route, Switch, HashRouter as Router} from 'react-router-dom'
 import App from './App';
 const routing = (
+
     <Router>
         <Switch>
             <Route exact path="/" component={App}/>
@@ -14,3 +15,4 @@ const routing = (
     </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'));
+document.title ="Home"

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sarkeett/static/css/main.c97c0656.chunk.css",
+    "main.css": "/sarkeett/static/css/main.05715934.chunk.css",
     "main.js": "/sarkeett/static/js/main.d7db3668.chunk.js",
     "main.js.map": "/sarkeett/static/js/main.d7db3668.chunk.js.map",
     "runtime-main.js": "/sarkeett/static/js/runtime-main.0f42061d.js",
@@ -8,7 +8,7 @@
     "static/js/2.a4de21fe.chunk.js": "/sarkeett/static/js/2.a4de21fe.chunk.js",
     "static/js/2.a4de21fe.chunk.js.map": "/sarkeett/static/js/2.a4de21fe.chunk.js.map",
     "index.html": "/sarkeett/index.html",
-    "static/css/main.c97c0656.chunk.css.map": "/sarkeett/static/css/main.c97c0656.chunk.css.map",
+    "static/css/main.05715934.chunk.css.map": "/sarkeett/static/css/main.05715934.chunk.css.map",
     "static/js/2.a4de21fe.chunk.js.LICENSE.txt": "/sarkeett/static/js/2.a4de21fe.chunk.js.LICENSE.txt",
     "static/media/background.90941e29.png": "/sarkeett/static/media/background.90941e29.png",
     "static/media/salogo.5f035077.png": "/sarkeett/static/media/salogo.5f035077.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.0f42061d.js",
     "static/js/2.a4de21fe.chunk.js",
-    "static/css/main.c97c0656.chunk.css",
+    "static/css/main.05715934.chunk.css",
     "static/js/main.d7db3668.chunk.js"
   ]
 }

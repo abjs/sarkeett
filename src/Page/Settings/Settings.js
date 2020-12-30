@@ -3,6 +3,7 @@ import homelogo from "./img/homelogo.png";
 import salogo from "./img/salogo.png";
 import "./Settings.css";
 export default function Settings() {
+  document.title ="settings"
   return (
     <>
       <div className="Settings">
