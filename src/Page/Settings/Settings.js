@@ -30,12 +30,12 @@ export default function Settings() {
         </div>
         <div className="bun">
           <button class="button-settings button1">
-            <span className="para">Log In with another account</span>
+            <span className="para">Delete  account</span>
           </button>
         </div>
         <div className="bun">
           <button class="button-settings button1">
-            <span className="para">Log In with another account</span>
+            <span className="para">LogOut</span>
           </button>
         </div>
         </div>
