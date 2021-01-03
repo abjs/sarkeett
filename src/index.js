@@ -6,6 +6,7 @@ import {Route, Switch, HashRouter as Router} from 'react-router-dom'
 import App from './App';
 import Feeds from './Page/Feeds/Feeds';
 import Explore from './Page/Explore/Explore';
+import Profile from './Page/Profile/Profile';
 const routing = (
 
     <Router>
@@ -15,6 +16,7 @@ const routing = (
             <Route path="/settings" component={Settings}/>
             <Route path="/explore" component={Explore}/>
             <Route path="/feed" component={Feeds}/>
+            <Route path="/profile" component={Profile}/>
         </Switch>
     </Router>
 )

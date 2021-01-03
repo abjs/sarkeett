@@ -8,6 +8,7 @@ import './App.css';
 // import LoginForm from './Component/LoginForm/LoginForm'
 // import Settings from './Page/Settings/Settings'
 import Page from './Page/Page'
+// import Profile from './Page/Profile/Profile';
 // import Profile from './Profile'
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
 
       {/* only for deployment */}
       <Page/>
+      {/* < Profile /> */}
       {/* <HomeInUp/> */}
       {/* <LoginForm/> */}
       {/* <Profile /> */}

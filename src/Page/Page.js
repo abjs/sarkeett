@@ -25,6 +25,11 @@ export default function Page() {
             Explore
           </Link>
         </div>
+        <div className="page-btn">
+          <Link className="page-btn" to="/profile">
+            Profile
+          </Link>
+        </div>
       </div>
     </>
   );
