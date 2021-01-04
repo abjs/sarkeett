@@ -1,0 +1,10 @@
+.Bg_Img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.Bg_Img >img{
+    height: 100vh;
+    background-size: 100%;
+}

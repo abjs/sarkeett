@@ -4,6 +4,8 @@ import React from "react";
 
 export default function Explore() {
   document.title ="Explore"
+  document.body.style.backgroundColor = "black"
+
   return (
     <div>
       <div>

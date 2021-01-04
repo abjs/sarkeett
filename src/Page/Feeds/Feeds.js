@@ -4,6 +4,8 @@ import Header from "../../Component/Header/Header";
 import './Feeds.css'
 export default function Feeds() {
   document.title ="Feeds"
+  document.body.style.backgroundColor = "black"
+
   return (
     <div className='Feeds'>
       <div>

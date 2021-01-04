@@ -4,6 +4,7 @@ import background_image from './background.png'
 import './HomeInUp.css'
 export default function HomeInUp() {
     document.title ="Home"
+  document.body.style.backgroundColor = "black"
     return (
         <div className="HomeInUp">
             <NavBar/>
