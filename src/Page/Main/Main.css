@@ -4,9 +4,61 @@
 .Main{
     height: 100vh;
 }
-/* .Main__Image{
-    background-repeat: no-repeat, repeat;
-    background-color:black;
-    height: 100vh;
-} */
+.Main__logo{
+    height: 12vh;
+    display: grid;
+    justify-items: center;
+}
+.Main__logo >img{
+    width: 10vh;
+    left: 10px;
+    top: 10px;
+}
 
+.Main__contaner{
+    display: flex;
+    height: 88vh;
+    background-color: darkred;
+}
+
+.Main__plases{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 88vh;
+    background-color:yellow;
+}
+.main__Icon__buttons{
+    height: 88vh;
+    width: 50%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 90px);
+    align-content: center;
+    grid-gap: 4em;
+    justify-content: center;
+}
+
+@media only screen and (orientation: portrait) {
+    .Main__logo >img{
+        width: 10vh;
+    }
+    .Main__plases{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 30vh;
+        width: 100%;
+        background-color: darksalmon;
+    }
+    .Main__contaner{
+        flex-direction:column;
+    }
+    .main__Icon__buttons{  
+        width: 100%;
+        background-color: white;   
+    }
+
+}

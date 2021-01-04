@@ -10,18 +10,18 @@ import Profile from './Page/Profile/Profile';
 // import Page from './Page/Page'
 // import Profile from './Page/Profile/Profile';
 // import Profile from './Profile'
-// import Main from './Page/Main/Main'
+import Main from './Page/Main/Main'
 export default function App() {
   return (
     <div>
-      <Profile/>
+      {/* <Profile/> */}
         {/* <div className="abin"> */}
          {/* <Explore /> */}
         {/* </div> */}
 
       {/* only for deployment */}
       {/* <Page/> */}
-      {/* <Main/> */}
+      <Main/>
       {/* < Profile /> */}
       {/* <HomeInUp/> */}
       {/* <LoginForm/> */}
