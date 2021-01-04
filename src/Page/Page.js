@@ -6,8 +6,8 @@ export default function Page() {
     <>
       <div className="Page_div">
         <div className="page-btn">
-          <Link className="page-btn" to="/home">
-            Home
+          <Link className="page-btn" to="/gotologoin">
+            First Page
           </Link>
         </div>
         <div className="page-btn">
@@ -28,6 +28,11 @@ export default function Page() {
         <div className="page-btn">
           <Link className="page-btn" to="/profile">
             Profile
+          </Link>
+        </div>
+        <div className="page-btn">
+          <Link className="page-btn" to="/home">
+            Home
           </Link>
         </div>
       </div>

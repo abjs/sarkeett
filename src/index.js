@@ -8,17 +8,19 @@ import Feeds from './Page/Feeds/Feeds';
 import Explore from './Page/Explore/Explore';
 import Profile from './Page/Profile/Profile';
 import Page from './Page/Page';
+import Main from './Page/Main/Main'
 const routing = (
 
     <Router>
         <Switch>
             <Route exact path="/" component={App}/>
-            <Route path="/home" component={HomeInUp}/>
+            <Route path="/gotologoin" component={HomeInUp}/>
             <Route path="/settings" component={Settings}/>
             <Route path="/explore" component={Explore}/>
             <Route path="/feed" component={Feeds}/>
             <Route path="/profile" component={Profile}/>
             <Route path="/page" component={Page}/>
+            <Route path="/home" component={Main}/>
         </Switch>
     </Router>
 )
