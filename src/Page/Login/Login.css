@@ -3,8 +3,10 @@
     font-family: Oxanium;
     font-style: normal;
     font-weight: 800;
-  
     text-align: center;
+}
+.Login__App{
+    display: flex;
 }
 .Login__left__test >h1{
     margin: 10px;
@@ -12,14 +14,7 @@
 .Login__App{
     height: 100vh;
 }
-.Login__left{
-    height: 100vh;
-    width: 50vw;
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    justify-content: center;
-    
-}
+
 .Login__left__img{
     align-self: start
 
@@ -27,13 +22,104 @@
 .Login__left__img >img{
     height: 20vh;
 }
-.Login__right{
+.Login__left{
     height: 100vh;
-    width: 50vw;
-    background-color: rgb(102, 36, 187);
+    width: 45vw;
+    background-color: rgb(0, 0, 0);
+    display: grid;  
 }
-.Login__App{
-    display: flex;
+.Login__right{
+    display: grid;
+    height: 100vh;
+    width: 55vw;
+
+}
+.login__container{
+    height: 90vh;
+    width: 35vw;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px 0px;
+    display: grid;
+    /* padding-left: 5vw; */
+  
+    justify-self: center;
+    align-self: center;    
+
+}
+.login__container__input{
+    background: #98FF85;   
+}
+.login__container__logo >img{
+    height: 20vh;
+
+   
+}
+
+.login__container__input__elament{
+    background: #98FF85;
+    border: none;
+    height: 6vh;
+    max-height: 150px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    width: 80%;
+    margin: 1vh;
+    outline: none;
+    padding-left: 20px;
+}
+.login__container__input__button__elament{
+    background: #363C35;
+    height: 6vh;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    width: 80%;
+    margin: 1vh;
+    outline: none;
+    color: #39FF14;
+    outline: none;
+
+}
+.login__container__input__button__elament_forget{
+    background: #000000;
+    height: 8vh;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    width: 80%;
+    margin: 1vh;
+    outline: none;
+    color: #f8f8f8;
+    outline: none; 
+}
+.login__container__input__button__elament_Sign_Up{
+    background: #39FF14;
+    height: 8vh;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    width: 80%;
+    margin: 1vh;
+    outline: none;
+    color: black;
+    border: none;
+}
+/* .login__container__middle{
+    margin-top: 3vh;
+} */
+.login__container__last{
+    text-align: center;
+    margin-top: 2vh;
+}
+.login__container__last__icons__element >img{
+    width: 40%;
+    padding-top: 2vh;
+    
+}
+.login__container__logo{
+    justify-self:  center;
+    
+}
+.login__container__start,.login__container__middle{
+    margin-left: 45px;
 }
 @media only screen and (orientation: portrait) {
     .Login__left{
@@ -48,18 +134,15 @@
     .Login__App{
         flex-direction: column-reverse;
     }
-}
-@media only screen and (max-width: 600px) {
-    .Login__left{
-        display: none;
-        height: 50vh;
-        width: 100vw;
-    }  
-    .Login__right{
-        height: 100vh;
-        width: 100vw;
-    } 
-    .Login__App{
-        flex-direction: column-reverse;
+    .login__container{
+        height: 90vh;
+        width: 70%;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 60px 0px;
+        justify-self: center;
+        align-self: center;
+    
     }
-  }
+    
+}

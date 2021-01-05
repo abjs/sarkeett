@@ -9,6 +9,7 @@ import Explore from './Page/Explore/Explore';
 import Profile from './Page/Profile/Profile';
 import Page from './Page/Page';
 import Main from './Page/Main/Main'
+import Login from './Page/Login/Login';
 const routing = (
 
     <Router>
@@ -21,6 +22,7 @@ const routing = (
             <Route path="/profile" component={Profile}/>
             <Route path="/page" component={Page}/>
             <Route path="/home" component={Main}/>
+            <Route path="/login" component={Login}/>
         </Switch>
     </Router>
 )

@@ -35,6 +35,11 @@ export default function Page() {
             Home
           </Link>
         </div>
+        <div className="page-btn">
+          <Link className="page-btn" to="/login">
+            Login
+          </Link>
+        </div>
       </div>
     </>
   );
