@@ -1,4 +1,4 @@
-.Login__left__2 p  {
+.SignUp__left__2 p  {
     text-transform: uppercase;
     font-family: Oxanium;
     color: #39FF14;
@@ -7,7 +7,7 @@
     font-size: 35px;
     text-align: center
 }
-.Login__left__2 h3  {
+.SignUp__left__2 h3  {
     text-transform: capitalize;
     font-family: Oxanium;
     color: #39FF14;
@@ -17,7 +17,7 @@
     text-align: center
 }
 
-.Login__left{
+.SignUp__left{
     height: 100vh;
     width: 40vw;
     display: grid;
@@ -25,20 +25,20 @@
     align-content: center;
     justify-content: center;
 }
-.Login__left__1 {
+.SignUp__left__1 {
     
     justify-self: start;
 }
-.Login__left__1  img{
+.SignUp__left__1  img{
     
     height: 20vh;
 }
-.Login__left__2 {
+.SignUp__left__2 {
     
     align-self: center
 
 }
-.Login__left__3{
+.SignUp__left__3{
     
     align-self: center
 
@@ -46,7 +46,7 @@
 
 
 
-.Login__App{
+.SignUp__App{
     display: flex;
 }
 
@@ -54,13 +54,13 @@
 
 
 
-.Login__right{
+.SignUp__right{
     display: grid;
     height: 100vh;
     width: 60vw;
     background-color: gray
 }
-.Login__right_contaner{
+.SignUp__right_contaner{
     height: 90vh;
     width: 50vh;
     min-height: 700px;
@@ -73,17 +73,17 @@
     align-self: center;
     display: grid;
     padding: 20px;
-    grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr .8fr;
 
 }
-.Login__right_contaner_con0 img{
+.SignUp__right_contaner_con0 img{
     height: 15vh;
 }
-.Login__right_contaner_con0{
+.SignUp__right_contaner_con0{
     justify-self: center;
     align-self:  center;
 }
-.Login__right_contaner_con1{
+.SignUp__right_contaner_con1{
    
     width: 80%;
     justify-self: center;
@@ -98,7 +98,7 @@
     justify-content: center;    
 }
 
-.Login__right_contaner_con2{
+.SignUp__right_contaner_con2{
     margin-top: 10px;
     width: 80%;
     justify-self: center;
@@ -107,72 +107,54 @@
     padding: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.Login__right_contaner_con3{
+.SignUp__right_contaner_con3{
     margin-top: 10px;
     width: 80%;
     justify-self: center;
     background: #363C35;
     outline: none;
-    border-radius: 30px 10px 30px 10px;
+    border-radius: 30px 0;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 
 }
-.Login__right_contaner_con5{
-    margin-top: 10px;
-    width: 80%;
-    justify-self: center;
-    background:white;
-    outline: none;
-    border-radius: 10px 30px 10px 30px;
-    color: black;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-
-}
-.Login__right_contaner_con4{
-    margin-top: 50px;
+.SignUp__right_contaner_con4{
     padding: 10px;
     justify-self: center;
     font-size: 10px;
+
     text-align: center;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
-    width: 80%;
-    height: 60px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 
-
 @media only screen and (orientation: portrait) {
-    /* .Login__left{
+    /* .SignUp__left{
         width: 100vw;
         background-color: black;
     }
-    .Login__left__2 p  {
+    .SignUp__left__2 p  {
     
       font-size: 100px;
       font-family: Times;    
       margin: 10px;
       padding: 10px;
     } */
-    /* .Login__left__2 h3  {
+    /* .SignUp__left__2 h3  {
       font-family: Times;
       font-size: 82px;
       margin: 10px;
       padding: 10px;
     } */
-    .Login__left  {
+    .SignUp__left  {
         display: none;
     }
-    .Login__right{
+    .SignUp__right{
         width: 100vw;
     }
-    .Login__App{
+    .SignUp__App{
         flex-direction: column;
 
     }
-    .Login__right_contaner{
+    .SignUp__right_contaner{
         height: 80%;
         width: 80%; 
     }

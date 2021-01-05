@@ -2,6 +2,8 @@ import React from 'react'
 // import Footer from './Component/Footer/Footer'
 // import Header from './Component/Header/Header'
 import './App.css';
+// import Forget from './Page/Login/Login'
+// import SignUp from './Page/SignUp/SignUp'
 import Login from './Page/Login/Login';
 // import Profile from './Page/Profile/Profile';
 // import Explore from './Page/Explore/Explore';
@@ -15,6 +17,8 @@ import Login from './Page/Login/Login';
 export default function App() {
   return (
     <div>
+      {/* <SignUp/> */}
+      {/* <Forget/> */}
       <Login/>
       {/* <Profile/> */}
         {/* <div className="abin"> */}

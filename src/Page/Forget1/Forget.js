@@ -28,15 +28,19 @@ export default function Login() {
           <img src={logo} alt="logo"/>
         </div>
         <div className="Login__right_contaner_con1">
-         <h2>Login</h2>
+         <h2>Sign Up</h2>
         </div>
+        <input type="text" placeholder="Mobile number or Email"  className="Login__right_contaner_con2"/>
+        <input type="text" placeholder="Full Name"  className="Login__right_contaner_con2"/>
         <input type="text" placeholder="Username"  className="Login__right_contaner_con2"/>
         <input type="text"  placeholder="Password" className="Login__right_contaner_con2"/>
-        <button className="Login__right_contaner_con3">Login</button>
-        <button className="Login__right_contaner_con5">Forget password?</button>
-       
-        <button className="Login__right_contaner_con4">Forget password?</button>
-   
+        <input type="text" placeholder="Confirm Password"  className="Login__right_contaner_con2"/>
+        <button className="Login__right_contaner_con3">SSBHdba</button>
+        <p className="Login__right_contaner_con4">
+        By signing up, agree to our Terms,
+        
+        Data, Policy, and Cookies Policy
+        </p>
       </div>
       </div>
     </div>

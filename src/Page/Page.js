@@ -40,6 +40,11 @@ export default function Page() {
             Login
           </Link>
         </div>
+        <div className="page-btn">
+          <Link className="page-btn" to="/signup">
+          Sign Up
+          </Link>
+        </div>
       </div>
     </>
   );
