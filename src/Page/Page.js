@@ -45,6 +45,11 @@ export default function Page() {
           Sign Up
           </Link>
         </div>
+        <div className="page-btn">
+          <Link className="page-btn" to="/post">
+          Post
+          </Link>
+        </div>
       </div>
     </>
   );

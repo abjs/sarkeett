@@ -1,49 +1,25 @@
 import React from "react";
-import homelogo from "./img/homelogo.png";
-import salogo from "./img/salogo.png";
+import Header from "../../Component/Header/Header";
 import "./Settings.css";
 export default function Settings() {
-  document.title ="settings"
+  document.title = "settings";
   return (
     <>
-      <div className="Settings">
-        <div className="salogo">
-          <img src={salogo} alt="Sarkktt Logo" />
-        </div>
-        <div className="homelogo">
-          <img src={homelogo} alt="Home Logo" />
-        </div>
+    <div className="setings__Head">
+    <Header  titile="settings" />
+    </div>
+
+      <div className="settings__button">   
+            <button class="settings__button__el">
+              Log In with another account
+            </button>
+            <button class="settings__button__el">
+              Delete account
+            </button>
+            <button class="settings__button__el">
+              Logout
+            </button>
       </div>
-
-      <div className="Stt-h1">
-        <div className="heading">
-        <h1>SETTINGS</h1>
-        </div>
-         
-      </div>
-    <div className="bin-flex" >
-      <div className="buttons">
-        <div className="bun">
-          <button class="button-settings button1">
-            <span className="para">Log In with another account</span>
-          </button>
-        </div>
-        <div className="bun">
-          <button class="button-settings button1">
-            <span className="para">Delete  account</span>
-          </button>
-        </div>
-        <div className="bun">
-          <button class="button-settings button1">
-            <span className="para">LogOut</span>
-          </button>
-        </div>
-        </div>
-
-      </div>
-
-
-
     </>
   );
 }

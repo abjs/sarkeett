@@ -3,63 +3,31 @@ body{
     padding: 0;
     /* background-color: black; */
 }
-.salogo >img{
-    height: 223px;
+.setings__Head{
+    height: 10vh;
+    width: 100vw;
 }
-.homelogo{
-    margin-top: 30px;
-    margin-right: 30px;
-
-}
-.Settings{
-    display: flex;
-    justify-content:space-between;
-    /* align-items: center; */
-}
-
-.heading  >h1 {
-    margin-top: -100px;
-    color: #39FF14;
+.settings__button{
+    margin-top: 10vh;
+    height: 80vh;
+    align-items: center;
+    display: grid;
     
 }
-.Stt-h1{
-    display: flex;
-    justify-content: center;
-}
-.btn-1 ,.btn-2,.btn-3 >h3{
-    color:white;
-}
-.button-settings{
-    background: #000000;
-    border: 5px solid #000000;
-    box-sizing: border-box;
-    width: 559px;
-    height: 175px;
-}
-.button-settings {
+.settings__button__el {
 width: 350px;
 height: 100px;
 background: #000000;
+color: white;
 border: 5px solid #FFFFFF;
 box-sizing: border-box;
 outline:none;
 border-radius: 0px 80px 50px;
 }
-.para{
-    color: white;
-}
 
-.buttons{
-    /* margin-top: 5vh; */
-    display: flex;
-    flex-direction:column;
-    align-content:space-between;
-    gap: 3vh;
-    margin-left: 3%;
-}
+
 @media only screen and (orientation: portrait) {
-    .bin-flex{
-        display: flex;
+    .settings__button{
         justify-content: center;
     }
 

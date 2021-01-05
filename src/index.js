@@ -11,6 +11,7 @@ import Page from './Page/Page';
 import Main from './Page/Main/Main'
 import Login from './Page/Login/Login';
 import SignUp from './Page/SignUp/SignUp'
+import Post from './Page/Post/Post'
 const routing = (
 
     <Router>
@@ -25,6 +26,7 @@ const routing = (
             <Route path="/home" component={Main}/>
             <Route path="/login" component={Login}/>
             <Route path="/signup" component={SignUp}/>
+            <Route path="/post" component={Post}/>
         </Switch>
     </Router>
 )

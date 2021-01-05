@@ -1,9 +1,17 @@
 import React from "react";
 import "./Header.css";
+import { useHistory } from 'react-router-dom';
 import logo from "./imge/logo.png";
 import HomeIcon from "@material-ui/icons/Home";
 import { IconButton } from "@material-ui/core";
 export default function Header_New({ titile }) {
+  // document.title ="Home"
+  // document.body.style.backgroundColor = "black"
+  const history = useHistory();
+  const gotoHome = () =>{
+      console.log("Hello")
+      history.push("/home");
+  }
   return (
     <div className="Header_New_Eelements">
       <div className="Header_New_Eelement">
@@ -14,7 +22,7 @@ export default function Header_New({ titile }) {
         <p style={{ color: "#39FF14" }}> {titile} </p>
       </div>
 
-      <div className="Header_New_Eelement">
+      <div onClick={gotoHome} className="Header_New_Eelement">
         <IconButton>
           <HomeIcon
             className="Header_New_Icon"
