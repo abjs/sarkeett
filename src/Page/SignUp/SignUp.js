@@ -57,6 +57,7 @@ const  SignUp = ({ history }) =>{
         <input name="confirm_password" type="password"  placeholder="Confirm Password"  className="SignUp__right_contaner_con2"/>
         <button type="submit" className="SignUp__right_contaner_con3">Sign Up</button>
     </form>
+    <button onClick={()=>{history.push("/login")}}   className="SignUp__right_contaner_con6">Sing In</button>
         <p className="SignUp__right_contaner_con4">
         By signing up, agree to our Terms,
         

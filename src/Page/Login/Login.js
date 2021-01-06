@@ -70,8 +70,8 @@ const Login = ({ history }) => {
           <button className="Login__right_contaner_con5">
             Forget password?
           </button>
-          <button className="Login__right_contaner_con4">
-            Forget password?
+          <button onClick={()=>{history.push("/signup")}} className="Login__right_contaner_con4">
+              Don’t have an account? Sign Up
           </button>
         </div>
       </div>

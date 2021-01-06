@@ -8,7 +8,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import SettingsIcon from "@material-ui/icons/Settings";
-import { IconButton } from "@material-ui/core";
+// import { IconButton } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
 export default function Main() {
   document.body.style.backgroundColor = "black";
