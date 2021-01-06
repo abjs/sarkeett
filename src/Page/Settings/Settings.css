@@ -12,6 +12,7 @@ body{
     height: 80vh;
     align-items: center;
     display: grid;
+    margin-left: 3vw;
     
 }
 .settings__button__el {

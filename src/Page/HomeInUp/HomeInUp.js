@@ -1,16 +1,23 @@
-import React from 'react'
-import background_image from './background.png'
+import React,{useContext} from "react";
+import { Redirect } from "react-router";
+import { AuthContext } from '../../helper/Auth';
 import { useHistory } from 'react-router-dom';
+import background_image from './background.png'
 import mob from './mob.png'
 import './HomeInUp.css'
 export default function HomeInUp() {
   document.title ="Home"
   document.body.style.backgroundColor = "black"
   const history = useHistory();
-  const gotoLogin = () =>{
-      console.log("Hello")
-      history.push("/login");
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to="/home" />;
   }
+  const gotoLogin = () =>{
+    //   console.log("Hello")
+      history.push("/login");
+  } 
     return (
         <div className="HomeInUp">
             <div className="HomeInUp__NavBar">

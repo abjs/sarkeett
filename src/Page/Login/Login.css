@@ -73,8 +73,12 @@
     align-self: center;
     display: grid;
     padding: 20px;
-    grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr  1fr 3fr 1fr 1fr;
 
+}
+.Login__right_contaner__form{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;   
 }
 .Login__right_contaner_con0 img{
     height: 15vh;

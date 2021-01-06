@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useCallback, useContext } from "react";
+import { withRouter, Redirect } from "react-router";
+import { AuthContext } from '../../helper/Auth';
+import app from '../../helper/firebase';
 import "./Login.css";
 import logo from "./logo.png";
-export default function Login() {
+const  Login = ({ history }) => {
+  const handleLogin = useCallback(
+    async event => {
+      event.preventDefault();
+      const { email, password } = event.target.elements;
+      try {
+        await app
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value);
+        history.push("/home");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to="/home" />;
+  }
+
   return (
     <div className="Login__App">
       <div className="Login__left">
@@ -14,14 +38,8 @@ export default function Login() {
         <h3>It is not just a media. The key to learn, listen, engage and build relationships</h3>
           <br/>
           <p>Come let us explore the world TOGETHER</p>
-        </div>
-
-      
-
-     
+        </div>     
       </div>
-
-
       <div className="Login__right">
       <div className="Login__right_contaner">
         <div className="Login__right_contaner_con0">
@@ -30,16 +48,17 @@ export default function Login() {
         <div className="Login__right_contaner_con1">
          <h2>Login</h2>
         </div>
-        <input type="text" placeholder="Username"  className="Login__right_contaner_con2"/>
-        <input type="text"  placeholder="Password" className="Login__right_contaner_con2"/>
-        <button className="Login__right_contaner_con3">Login</button>
+        <form className="Login__right_contaner__form" onSubmit={handleLogin}>
+        <input name="email" type="email" placeholder="Username"  className="Login__right_contaner_con2"/>
+        <input name="password" type="password"  placeholder="Password" className="Login__right_contaner_con2"/>
+        <button type="submit" className="Login__right_contaner_con3">Login</button>
+        </form>
         <button className="Login__right_contaner_con5">Forget password?</button>
-       
         <button className="Login__right_contaner_con4">Forget password?</button>
-   
       </div>
       </div>
     </div>
   );
 }
 
+export default withRouter(Login);
