@@ -7,10 +7,10 @@ import './App.css';
 // import Login from './Page/Login/Login';
 // import Profile from './Page/Profile/Profile';
 // import Explore from './Page/Explore/Explore';
-// import HomeInUp from './Page/HomeInUp/HomeInUp'
+import HomeInUp from './Page/HomeInUp/HomeInUp'
 // import LoginForm from './Component/LoginForm/LoginForm'
 // import Settings from './Page/Settings/Settings'
-import Page from './Page/Page'
+// import Page from './Page/Page'
 // import Profile from './Page/Profile/Profile';
 // import Profile from './Profile'
 // import Main from './Page/Main/Main'
@@ -25,10 +25,10 @@ export default function App() {
       {/* <Explore /> */}
       {/* </div> */}
       {/* only for deployment */}
-      <Page/>
+      {/* <Page/> */}
       {/* <Main/> */}
       {/* < Profile /> */}
-      {/* <HomeInUp/> */}
+      <HomeInUp/>
       {/* <LoginForm/> */}
       {/* <Profile /> */}
       {/* Sign in  */}

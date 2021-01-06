@@ -1,9 +1,12 @@
-import React,{ useCallback } from "react";
+import React,{ useCallback, useContext } from "react";
 import "./SignUp.css";
+import { Redirect } from "react-router";
+import { AuthContext } from '../../helper/Auth';
 import logo from "./logo.png";
 import { withRouter } from "react-router";
 import app from '../../helper/firebase'
 const  SignUp = ({ history }) =>{
+  const { currentUser } = useContext(AuthContext);
   const handleSignUp = useCallback(async event => {
     event.preventDefault();
     const {full_name,user_name, email, password,confirm_password } = event.target.elements;
@@ -17,6 +20,10 @@ const  SignUp = ({ history }) =>{
       alert(error);
     }
   }, [history]);
+
+  if (currentUser) {
+    return <Redirect to="/home" />;
+  }
   return (
     <div className="SignUp__App">
       <div className="SignUp__left">

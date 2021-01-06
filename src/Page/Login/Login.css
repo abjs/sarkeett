@@ -149,33 +149,26 @@
 
 
 @media only screen and (orientation: portrait) {
-    /* .Login__left{
-        width: 100vw;
-        background-color: black;
-    }
-    .Login__left__2 p  {
-    
-      font-size: 100px;
-      font-family: Times;    
-      margin: 10px;
-      padding: 10px;
-    } */
-    /* .Login__left__2 h3  {
-      font-family: Times;
-      font-size: 82px;
-      margin: 10px;
-      padding: 10px;
-    } */
     .Login__left  {
         display: none;
     }
     .Login__right{
         width: 100vw;
     }
-    .Login__App{
-        flex-direction: column;
-
+  
+    .Login__right_contaner{
+        height: 80%;
+        width: 80%; 
     }
+}
+@media only screen and (max-width: 600px) {
+    .Login__left  {
+        display: none;
+    }
+    .Login__right{
+        width: 100vw;
+    }
+  
     .Login__right_contaner{
         height: 80%;
         width: 80%; 

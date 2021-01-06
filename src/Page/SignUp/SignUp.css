@@ -132,23 +132,23 @@
 }
 
 @media only screen and (orientation: portrait) {
-    /* .SignUp__left{
-        width: 100vw;
-        background-color: black;
+    .SignUp__left  {
+        display: none;
     }
-    .SignUp__left__2 p  {
-    
-      font-size: 100px;
-      font-family: Times;    
-      margin: 10px;
-      padding: 10px;
-    } */
-    /* .SignUp__left__2 h3  {
-      font-family: Times;
-      font-size: 82px;
-      margin: 10px;
-      padding: 10px;
-    } */
+    .SignUp__right{
+        width: 100vw;
+    }
+    .SignUp__App{
+        flex-direction: column;
+
+    }
+    .SignUp__right_contaner{
+        height: 80%;
+        width: 80%; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .SignUp__left  {
         display: none;
     }
