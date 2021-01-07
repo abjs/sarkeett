@@ -52,7 +52,7 @@ export default function Page() {
         </div>
         <div className="page-btn">
           <Link className="page-btn" to="/forgetpassword">
-          forget password
+          Forget password
           </Link>
         </div>
       </div>

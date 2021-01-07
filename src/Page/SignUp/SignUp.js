@@ -55,9 +55,6 @@ const SignUp = ({ history }) => {
           // console.log(values)
          
         }
-        else{
-          console.log("Abin Sum error in it")
-        }
       },
       [errors,isSubmitting,values,firebase_user_register]
     );
