@@ -161,7 +161,7 @@ const SignUp = ({ history }) => {
             }}
             className="SignUp__right_contaner_con6"
           >
-            Sing In
+            Sign In
           </button>
           <p className="SignUp__right_contaner_con4">
             By signing up, agree to our Terms, Data, Policy, and Cookies Policy

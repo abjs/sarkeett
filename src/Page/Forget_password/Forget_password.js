@@ -16,31 +16,18 @@ const Forget_password = ({history}) => {
     // console.log(email.value)
     app.auth().sendPasswordResetEmail(email.value)
     .then(() => {
-        console.log('Password Reset Email Sent Successfully!');
-        alert('Password Reset Link Sent Email reset passwprd and login')
+        // console.log('Password Reset Email Sent Successfully!');
+        alert('Password Reset Link Has Sent To Email reset Password and Login')
         history.push("login");
     })
     .catch(error => {
         // console.error(error);
         if(error.code === "auth/user-not-found"){
-          alert("User not found enter valid email")
+          alert("User Not Found  Please Enter a Valid Email")
         }
-        
     });
 
   }
-//   const resetPasswordFunction = () => {
-//     const email = emailField.value;
-
-//     //Built in Firebase function that sends password reset emails
-//     auth.sendPasswordResetEmail(email)
-//     .then(() => {
-//         console.log('Password Reset Email Sent Successfully!');
-//     })
-//     .catch(error => {
-//         console.error(error);
-//     });
-// }
   return (
     <div className="Forget__App">
       <div className="Forget__left">

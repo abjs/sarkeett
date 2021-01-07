@@ -9,7 +9,7 @@ export default function Header_New({ titile }) {
   // document.body.style.backgroundColor = "black"
   const history = useHistory();
   const gotoHome = () =>{
-      console.log("Hello")
+      // console.log("Hello")
       history.push("/home");
   }
   return (
