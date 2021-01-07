@@ -50,6 +50,11 @@ export default function Page() {
           Post
           </Link>
         </div>
+        <div className="page-btn">
+          <Link className="page-btn" to="/forgetpassword">
+          forget password
+          </Link>
+        </div>
       </div>
     </>
   );

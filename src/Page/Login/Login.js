@@ -67,7 +67,7 @@ const Login = ({ history }) => {
               Login
             </button>
           </form>
-          <button className="Login__right_contaner_con5">
+          <button onClick={()=>{history.push("/forgetpassword")}} className="Login__right_contaner_con5">
             Forget password?
           </button>
           <button onClick={()=>{history.push("/signup")}} className="Login__right_contaner_con4">

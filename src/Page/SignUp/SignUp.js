@@ -1,44 +1,74 @@
-import React, { useCallback, useContext } from "react";
+// import React, { useContext,useState, useEffect } from "react";
+import React, { useCallback, useContext,useState, useEffect } from "react";
 import "./SignUp.css";
 import { Redirect } from "react-router";
 import { AuthContext } from "../../helper/Auth";
 import logo from "./logo.png";
 import { withRouter } from "react-router";
 import app from "../../helper/firebase";
+import validate from './validateInfo';
 const SignUp = ({ history }) => {
+  const [values, setValues] = useState({
+      username: '',
+      email: '',
+      password: '',
+      password2: ''
+    });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { currentUser } = useContext(AuthContext);
-  const handleSignUp = useCallback(
-    async (event) => {
-      event.preventDefault();
-      const {
-        full_name,
-        user_name,
-        email,
-        password,
-        confirm_password,
-      } = event.target.elements;
-      console.log(
-        full_name.value,
-        user_name.value,
-        email.value,
-        password.value,
-        confirm_password.value
-      );
-      // const user__email =email.value
-      // const user__password=password.value
-      // const user__name=full_name.value
+  const [errors, setErrors] = useState({});
+
+  const handleChange = e => {
+      const { name, value } = e.target;
+      setValues({
+        ...values,
+        [name]: value
+      });
+    };
+  //   const sendVerificationEmail = () => {
+  //     //Built in firebase function responsible for sending the verification email
+  //     app.auth.currentUser.sendEmailVerification()
+  //     .then(() => {
+  //         console.log('Verification Email Sent Successfully !');
+  //     })
+  //     .catch(error => {
+  //         console.error(error);
+  //     });
+  // }
+    const firebase_user_register = useCallback(async (email, password) => {
       try {
         await app
           .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
-        history.push("/home");
+          .createUserWithEmailAndPassword(email, password)
+          history.push("/home");
       } catch (error) {
         alert(error);
       }
-    },
-    [history]
-  );
+    }, [history]);
+   
 
+    useEffect(
+      () => {
+        // console.log(errors)
+        if (Object.keys(errors).length === 0 && isSubmitting) {
+          firebase_user_register(values.email,values.password);
+          // console.log(values)
+         
+        }
+        else{
+          console.log("Abin Sum error in it")
+        }
+      },
+      [errors,isSubmitting,values,firebase_user_register]
+    );
+
+
+    const  handleSignUp = e => {
+      e.preventDefault();
+  
+      setErrors(validate(values));
+      setIsSubmitting(true);
+    };
   if (currentUser) {
     return <Redirect to="/home" />;
   }
@@ -70,47 +100,56 @@ const SignUp = ({ history }) => {
           <form
             className="SignUp__right_contaner__form"
             onSubmit={handleSignUp}
+            noValidate
           >
             <input
-              name="email"
-              type="email"
-              placeholder="Email"
+              type='email'
+              name='email'
+              placeholder='Enter your email'
+              value={values.email}
+              onChange={handleChange}
               className="SignUp__right_contaner_con2"
             />
            <div className="SignUp__right_contaner__form_error">
-            <p>snjdq</p>
+           {errors.email && <p>{errors.email}</p>}
            </div>
 
             <input
-              name="full_name"
+              name="username"
               type="text"
               placeholder="Full Name"
               className="SignUp__right_contaner_con2"
+              value={values.username}
+              onChange={handleChange}
             />
            <div className="SignUp__right_contaner__form_error">
-            <p>snjdq</p>
+           {errors.username && <p>{errors.username}</p>}
            </div>
 
             <input
               name="password"
               id="password"
               type="password"
-              placeholder="Password"
+              placeholder='Enter your password'
+              value={values.password}
+              onChange={handleChange}
               className="SignUp__right_contaner_con2"
             />
            <div className="SignUp__right_contaner__form_error">
-            <p>snjdq</p>
+           {errors.password && <p>{errors.password}</p>}
            </div>
 
             <input
-              name="confirm_password"
               id="confirmpassword"
+              name='password2'
               type="password"
-              placeholder="Confirm Password"
+              placeholder='Confirm your password'
+              value={values.password2}
+              onChange={handleChange}
               className="SignUp__right_contaner_con2"
             />
            <div className="SignUp__right_contaner__form_error">
-            <p>snjdq</p>
+           {errors.password2 && <p>{errors.password2}</p>}
            </div>
             <button type="submit" className="SignUp__right_contaner_con3">
               Sign Up
@@ -132,8 +171,5 @@ const SignUp = ({ history }) => {
     </div>
   );
 };
-
 export default withRouter(SignUp);
-{
-  /* <input name="user_name" type="text" placeholder="Username"  className="SignUp__right_contaner_con2"/> */
-}
+

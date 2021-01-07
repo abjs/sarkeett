@@ -13,6 +13,7 @@ import Main from './Page/Main/Main'
 import Login from './Page/Login/Login';
 import SignUp from './Page/SignUp/SignUp'
 import Post from './Page/Post/Post'
+import Forget_password from './Page/Forget_password/Forget_password';
 import PrivateRouteToLogin from './helper/PrivateRouteToLogin'
 import PrivateRouteToFirst from './helper/PrivateRouteToFirst'
 const routing = (
@@ -30,6 +31,7 @@ const routing = (
             <Route path="/signup" component={SignUp}/>
             <PrivateRouteToFirst path="/post" component={Post}/>
             <Route path="/page" component={Page}/>
+            <Route path="/forgetpassword" component={Forget_password}/>
         </Switch>
     </Router>
     </AuthProvider>

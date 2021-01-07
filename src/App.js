@@ -2,6 +2,7 @@ import React from 'react'
 // import Footer from './Component/Footer/Footer'
 // import Header from './Component/Header/Header'
 import './App.css';
+// import Forget_password from './Page/Forget_password/Forget_password';
 // import Forget from './Page/Login/Login'
 // import SignUp from './Page/SignUp/SignUp'
 // import Login from './Page/Login/Login';
@@ -29,6 +30,7 @@ export default function App() {
       {/* <Main/> */}
       {/* < Profile /> */}
       <HomeInUp/>
+      {/* <Forget_password/> */}
       {/* <LoginForm/> */}
       {/* <Profile /> */}
       {/* Sign in  */}
