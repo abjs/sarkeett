@@ -73,13 +73,16 @@
     align-self: center;
     display: grid;
     padding: 20px;
-    grid-template-rows: 1fr 1fr 6fr 1fr .8fr;
+    grid-template-rows: 1fr 1fr 7fr 1fr .8fr;
 
 }
 .SignUp__right_contaner__form{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr .2fr 1fr .2fr 1fr .2fr 1fr .2fr 1fr  ;
 
+}
+.SignUp__right_contaner__form_error{
+    padding-left: 50px;
 }
 .SignUp__right_contaner_con0 img{
     height: 15vh;
