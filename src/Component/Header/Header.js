@@ -14,22 +14,27 @@ export default function Header_New({ titile }) {
   }
   return (
     <div className="Header_New_Eelements">
-      <div className="Header_New_Eelement">
+
+      <div className="Header__img">
         <img src={logo} alt="logo" />
       </div>
 
-      <div className="Header_New_Eelement">
-        <p style={{ color: "#39FF14" }}> {titile} </p>
+      <div className="Header_center">
+        <p style={{ color: "#39FF14",fontSize: "9vh" }}> {titile} </p>
       </div>
 
-      <div onClick={gotoHome} className="Header_New_Eelement">
+
+      <div onClick={gotoHome} className="Header_right">
+
         <IconButton>
           <HomeIcon
             className="Header_New_Icon"
-            style={{ color: "#39FF14", paddingRight: "10px", fontSize: 50 }}
+            style={{ color: "#39FF14", fontSize: "9vh" }}
           />
         </IconButton>
       </div>
+
+
     </div>
   );
 }

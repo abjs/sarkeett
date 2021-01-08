@@ -5,8 +5,14 @@ import { Redirect } from "react-router";
 import { AuthContext } from "../../helper/Auth";
 import logo from "./logo.png";
 import { withRouter } from "react-router";
-import app from "../../helper/firebase";
 import validate from './validateInfo';
+import firebase from 'firebase'
+import app from "../../helper/firebase"
+// import { Info } from "@material-ui/icons";
+const db = app.firestore()
+
+
+
 const SignUp = ({ history }) => {
   const [values, setValues] = useState({
       username: '',
@@ -18,24 +24,22 @@ const SignUp = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
   const [errors, setErrors] = useState({});
 
-
-  //   const sendVerificationEmail = () => {
-  //     //Built in firebase function responsible for sending the verification email
-  //     app.auth.currentUser.sendEmailVerification()
-  //     .then(() => {
-  //         console.log('Verification Email Sent Successfully !');
-  //     })
-  //     .catch(error => {
-  //         console.error(error);
-  //     });
-  // }
-    const firebase_user_register = useCallback(async (email, password) => {
+    const firebase_user_register = useCallback(async (email, password,name) => {
       try {
         await app
-          .auth()
-          .createUserWithEmailAndPassword(email, password)
-          history.push("/home");
-      } catch (error) {
+          .auth().createUserWithEmailAndPassword(email, password).then(cred => {
+            return db.collection('users').doc(cred.user.uid).set({
+              info:{
+                username:name,
+                email:email,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+              }
+             
+            });
+         
+      }).then(() => {
+        history.push("/home");
+      })}catch (error) {
         alert(error);
         // console.log(error)
       }
@@ -54,7 +58,7 @@ const SignUp = ({ history }) => {
         // console.log(errors)
         // console.log(Object.keys(errors).length )
         if (Object.keys(errors).length === 0 && isSubmitting) {
-          firebase_user_register(values.email,values.password);
+          firebase_user_register(values.email,values.password,values.username);
           // console.log(values)
          
         }

@@ -2,6 +2,7 @@
     flex: 1;
     justify-content: flex-end
 } */
-.Footer-end{
-    margin-top: 80vh;
+
+.Feed__story{
+    display: flex;
 }
