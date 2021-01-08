@@ -18,13 +18,7 @@ const SignUp = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
   const [errors, setErrors] = useState({});
 
-  const handleChange = e => {
-      const { name, value } = e.target;
-      setValues({
-        ...values,
-        [name]: value
-      });
-    };
+
   //   const sendVerificationEmail = () => {
   //     //Built in firebase function responsible for sending the verification email
   //     app.auth.currentUser.sendEmailVerification()
@@ -43,13 +37,22 @@ const SignUp = ({ history }) => {
           history.push("/home");
       } catch (error) {
         alert(error);
+        // console.log(error)
       }
     }, [history]);
-   
+    const handleChange = e => {
+      const { name, value } = e.target;
+      setValues({
+        ...values,
+        [name]: value
+      });
+      setErrors(validate(values));
+    };
 
     useEffect(
       () => {
         // console.log(errors)
+        // console.log(Object.keys(errors).length )
         if (Object.keys(errors).length === 0 && isSubmitting) {
           firebase_user_register(values.email,values.password);
           // console.log(values)
@@ -58,12 +61,9 @@ const SignUp = ({ history }) => {
       },
       [errors,isSubmitting,values,firebase_user_register]
     );
-
-
     const  handleSignUp = e => {
       e.preventDefault();
-  
-      setErrors(validate(values));
+      setErrors(validate(values));    
       setIsSubmitting(true);
     };
   if (currentUser) {
