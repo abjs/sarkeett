@@ -70,7 +70,7 @@ const Forget_password = ({history}) => {
           Create New Account
           </button>
 
-          <button onClick={()=>{history.push("/Forget")}} className="Forget__right_contaner_con4">
+          <button onClick={()=>{history.push("/login")}} className="Forget__right_contaner_con4">
                Sign In
           </button>
 

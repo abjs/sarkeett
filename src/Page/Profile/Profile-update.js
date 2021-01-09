@@ -120,7 +120,7 @@ export default function Update_profile() {
             </div>
             <div className="Update_profile_form">
             <label for="about">📕 About</label>
-            <input id="about" type="text" placeholder="📕 About" type="text" name="about" value={data.about} onChange={handleChange} className="Update_profile__text" />
+            <input id="about" type="text" placeholder="About"  name="about" value={data.about} onChange={handleChange} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
             <label for="hobby">👞 Hobby</label>
@@ -135,7 +135,7 @@ export default function Update_profile() {
             <input id="email" disabled placeholder="Email" name="email" value={data.email} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
-            <label for="website" for="name">🌐 Website</label>
+            <label for="website">🌐 Website</label>
             <input id="website" placeholder="🌐 website" type="text" name="website" value={data.website} onChange={handleChange} className="Update_profile__text" />
             </div>
 

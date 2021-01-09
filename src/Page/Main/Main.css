@@ -1,102 +1,130 @@
 * {
   margin: 0;
+  padding: 0;
 }
 .Main {
   height: 100vh;
   width: 100vw;
-}
-
-.Main__head {
-  height: 10vh;
-  width: 100vw;
-  background-color: aliceblue;
-  display: grid;
-  /* justify-content: center; */
-  grid-template-columns: 1fr 1fr;
-  /* align-content: center; */
-}
-.Main__logo > img {
-  height: 10vh;
-}
-.Main__logo{
-  align-self: start;
-  align-content: center;
-  justify-self: start;
+  background:url("./mainbackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .Main__logout{
-  align-self: center;
-  justify-self:end;
-  padding: 10px;
-  /* margin: 10px; */
-  margin-bottom: 1vh;
-
-  
+  display: grid;
+  height: 10vh;
+  justify-content: end;
 }
-.Main__logout >button{
-  background-color: black;
-  color: white;
+.Main__logout button{
   height: 50px;
-  width: 70px;
-  border: 5px solid white;
-  border-radius:10px;
+  min-width: 80px;
+  margin:20px;
+  background-color: black;
+  font-size: larger;
+  color: white;
   outline: none;
+  border: 2px solid green;
+  border-radius: 10px;
 }
-.Main__logout >button:hover{
-  border: 1px solid white;
+.Main__logout button:hover{
+  color: green;
+  border: 6px solid green;
+
 }
-.Main__contaner {
+.Main__contaner{
   height: 90vh;
-  width: 100vw;
-  display: flex;
-  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  /* background-color: wheat; */
 }
-.Main__contaner__left {
+.Main__contaner__left{
   height: 90vh;
   width: 40vw;
-  background-color: crimson;
-  display: grid;
   justify-content: center;
+  font-size: large;
+  color: white;
+  display: grid;
   align-content: center;
 }
-.Main__contaner__right {
+.Main__contaner__left p{
+  font-size:6vh;
+  font-weight: bolder;
+}
+.Main__contaner__right{
   height: 90vh;
   width: 60vw;
-  background-color: darkgrey;
   display: grid;
   justify-content: center;
   align-content: center;
+  padding: 10px;
 }
-.main__Icon__buttons {
-  display: grid;
-  grid-template-columns: 10vw 10vw 10vw;
-  row-gap: 10vw;
-  column-gap: 10vh;
-  margin-left: 15vh;
+.main__Icon__buttons{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15vw;
+  
 }
-.main__Icon__button__elament {
+
+.main__Icon__button__elament{
+
+ background-color: black;
+ color: #fff;
   display: grid;
-  justify-content: center;
   align-content: center;
-  background-color: #d9fcf4;
-  border-radius: 100px;
-  width: 70px;
-  height: 70px;
+  justify-content: center;
+  height: 7vw;
+  width: 7vw;
+  border-radius: 50%;
+  opacity: .7;
+  border: 1px solid white;
 }
+
+#Main_btn1:hover{
+  background-color: white;
+  color: black;
+}
+#Main_btn2:hover{
+  background-color: white;
+  color: black;
+}
+#Main_btn3:hover{
+  background-color: white;
+  color: black;
+}
+#Main_btn4:hover{
+  background-color: white;
+  color: black;
+}
+#Main_btn5:hover{
+  background-color: white;
+  color: black;
+}
+#Main_btn6:hover{
+  background-color: white;
+  color: black;
+}
+
 @media only screen and (orientation: portrait) {
-  .Main__contaner {
-    flex-direction: column;
-  }
-  .Main__contaner__left {
-    height: 40vh;
+  .Main__contaner__left{
+    height: 30vh;
     width: 100vw;
   }
-  .Main__contaner__right {
+  .Main__contaner{
+    grid-template-columns: 100vw;
+    grid-template-rows: 30vh 60vh;
+  }
+  .Main__contaner__right{
+    width: 100vw;
     height: 60vh;
-    width: 100vw;
   }
-  .main__Icon__buttons {
-    margin: auto;
-    row-gap: 15vw;
-    column-gap: 15vh;
+  .main__Icon__buttons{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15vw;
   }
+.main__Icon__button__elament{
+  height: 12vh;
+  width: 12vh;
+}
 }

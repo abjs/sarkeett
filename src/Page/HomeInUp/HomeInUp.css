@@ -1,3 +1,12 @@
+.HomeInUp{
+    height: 100vh;
+    background:url("background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;;
+    /* opacity: 40%; */
+}
 .img__pc{
     display:flex;
     justify-content:center; /* horizontally center */
@@ -30,6 +39,7 @@
     width: 100vw;
     background-color: white;
 
+
 }
 .HomeInUp__NavBar__left{
     height: 10vh;
@@ -61,6 +71,7 @@
     height: 7vh;
     padding: 12px;
 }
+
 @media only screen and (orientation: portrait) {
     .img__pc{
         display: none;

@@ -1,8 +1,9 @@
 import React from "react";
 import "./Main.css";
-import logo from "./logo.png";
+// import logo from "./mob.jpg";
+import PhotoIcon from '@material-ui/icons/Photo';
 import FilterHdrIcon from "@material-ui/icons/FilterHdr";
-import RssFeedIcon from "@material-ui/icons/RssFeed";
+// import RssFeedIcon from "@material-ui/icons/RssFeed";
 import ChatIcon from "@material-ui/icons/Chat";
 import SearchIcon from "@material-ui/icons/Search";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
@@ -16,46 +17,48 @@ export default function Main() {
   const history = useHistory();
   return (
     <div className="Main">
-      <div className="Main__head">
-        <div className="Main__logo">
-          <img src={logo} alt="Home Logo" />
-        </div>
-        <div className="Main__logout">
-            <button onClick={() => app.auth().signOut()}>Logout</button>
-        </div>
+
+
+      <div className="Main__logout">
+        <button onClick={() => app.auth().signOut()}>Logout</button>
       </div>
 
+
       <div className="Main__contaner">
+
         <div className="Main__contaner__left">
-          <div className="main__box">
-            <FilterHdrIcon />
-            <h1>Trending Places</h1>
+
+          <div className="main__box">    
+            <FilterHdrIcon style={{ fontSize: 50 }}/>
+            <p>Trending Places</p>
           </div>
+
         </div>
 
         <div className="Main__contaner__right">
           <div className="main__Icon__buttons">
-            <div onClick={()=>{history.push("/feed")}} className="main__Icon__button__elament">
-                <RssFeedIcon fontSize="large" />
+
+            <div onClick={() => { history.push("/album") }} className="main__Icon__button__elament " id="Main_btn1" >
+              <PhotoIcon  style={{ fontSize:60 }} />
             </div>
-            <div    onClick={()=>{history.push("/page")}} className="main__Icon__button__elament">
-                <ChatIcon fontSize="large" />
+            <div onClick={() => { history.push("/page") }} className="main__Icon__button__elament " id="Main_btn2">
+              <ChatIcon  style={{ fontSize:60 }} />
             </div>
-            <div   onClick={()=>{history.push("/page")}} className="main__Icon__button__elament">
-                <SearchIcon fontSize="large" />
+            <div onClick={() => { history.push("/page") }} className="main__Icon__button__elament " id="Main_btn3">
+              <SearchIcon  style={{ fontSize:60 }} />
             </div>
-            <div    onClick={()=>{history.push("/post")}}className="main__Icon__button__elament">
-                <ControlPointIcon fontSize="large" />
+            <div onClick={() => { history.push("/post") }} className="main__Icon__button__elament" id="Main_btn4">
+              <ControlPointIcon  style={{ fontSize:60 }} />
             </div>
-            <div   onClick={()=>{history.push("/profile")}} className="main__Icon__button__elament">
-                <AccountCircleIcon fontSize="large" />
+            <div onClick={() => { history.push("/profile") }} className="main__Icon__button__elament" id="Main_btn5">
+              <AccountCircleIcon  style={{ fontSize:60 }} />
             </div>
-            <div   onClick={()=>{history.push("/settings")}} className="main__Icon__button__elament">
-                <SettingsIcon fontSize="large" />
+            <div onClick={() => { history.push("/settings") }} className="main__Icon__button__elament" id="Main_btn6">
+              <SettingsIcon  style={{ fontSize:60 }} />
             </div>
           </div>
         </div>
-      </div>
+       </div>
     </div>
   );
 }
