@@ -8,16 +8,20 @@ import SearchIcon from "@material-ui/icons/Search";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import SettingsIcon from "@material-ui/icons/Settings";
-// import { IconButton } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
+import app from '../../helper/firebase'
 export default function Main() {
   document.body.style.backgroundColor = "black";
+  document.title = "Home";
   const history = useHistory();
   return (
     <div className="Main">
       <div className="Main__head">
         <div className="Main__logo">
           <img src={logo} alt="Home Logo" />
+        </div>
+        <div className="Main__logout">
+            <button onClick={() => app.auth().signOut()}>Logout</button>
         </div>
       </div>
 

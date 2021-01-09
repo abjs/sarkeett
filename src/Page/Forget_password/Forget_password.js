@@ -5,6 +5,7 @@ import "./Forget_password.css";
 import app from "../../helper/firebase";
 import logo from "./logo.png";
 const Forget_password = ({history}) => {
+  document.title ="Forget Password"
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {

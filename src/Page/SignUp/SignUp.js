@@ -6,14 +6,13 @@ import { AuthContext } from "../../helper/Auth";
 import logo from "./logo.png";
 import { withRouter } from "react-router";
 import validate from './validateInfo';
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 import app from "../../helper/firebase"
 // import { Info } from "@material-ui/icons";
 const db = app.firestore()
-
-
-
 const SignUp = ({ history }) => {
+document.body.style.backgroundColor = "black";
+document.title = "Sign Up";
   const [values, setValues] = useState({
       username: '',
       email: '',
@@ -29,16 +28,28 @@ const SignUp = ({ history }) => {
         await app
           .auth().createUserWithEmailAndPassword(email, password).then(cred => {
             return db.collection('users').doc(cred.user.uid).set({
-              info:{
                 username:name,
                 email:email,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-              }
-             
-            });
-         
+              
+            });         
       }).then(() => {
-        history.push("/home");
+
+          const user = app.auth().currentUser;
+          user.updateProfile({
+            displayName: name
+          }).then(function() {
+            // Update successful.
+            history.push("/home");
+          }).catch(function(error) {
+            // An error happened.
+            console.log(error)
+          });
+          console.log(user)
+
+       
+     
+     
       })}catch (error) {
         alert(error);
         // console.log(error)

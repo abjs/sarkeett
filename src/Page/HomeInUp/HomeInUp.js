@@ -6,7 +6,7 @@ import background_image from './background.png'
 import mob from './mob.png'
 import './HomeInUp.css'
 export default function HomeInUp() {
-  document.title ="Home"
+  document.title ="signup and signin"
   document.body.style.backgroundColor = "black"
   const history = useHistory();
   const { currentUser } = useContext(AuthContext);

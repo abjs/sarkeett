@@ -5,6 +5,8 @@ import app from "../../helper/firebase";
 import "./Login.css";
 import logo from "./logo.png";
 const Login = ({ history }) => {
+document.body.style.backgroundColor = "black";
+document.title = "Login";
   const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();

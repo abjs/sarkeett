@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Page.css";
 export default function Page() {
+document.title = "Site Map";
   return (
     <>
       <div className="Page_div">

@@ -7,7 +7,7 @@ import Settings from './Page/Settings/Settings'
 import App from './App';
 import Feeds from './Page/Feeds/Feeds';
 import Explore from './Page/Explore/Explore';
-import Profile from './Page/Profile/Profile';
+import Profile from './Page/Profile/Profile-update';
 import Page from './Page/Page';
 import Main from './Page/Main/Main'
 import Login from './Page/Login/Login';
@@ -16,22 +16,24 @@ import Post from './Page/Post/Post'
 import Forget_password from './Page/Forget_password/Forget_password';
 import PrivateRouteToLogin from './helper/PrivateRouteToLogin'
 import PrivateRouteToFirst from './helper/PrivateRouteToFirst'
+import Test from './Page/Test/Test';
 const routing = (
     <AuthProvider> 
     <Router>
         <Switch>
             <Route exact path="/" component={App}/>
             <Route path="/gotologoin" component={HomeInUp}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/signup" component={SignUp}/>
+            <Route path="/page" component={Page}/>
+            <Route path="/forgetpassword" component={Forget_password}/>
             <PrivateRouteToFirst path="/settings" component={Settings}/>
             <PrivateRouteToLogin path="/explore" component={Explore}/>
             <PrivateRouteToLogin path="/feed" component={Feeds}/>
             <PrivateRouteToLogin path="/profile" component={Profile}/>
             <PrivateRouteToFirst path="/home" component={Main}/>
-            <Route path="/login" component={Login}/>
-            <Route path="/signup" component={SignUp}/>
             <PrivateRouteToFirst path="/post" component={Post}/>
-            <Route path="/page" component={Page}/>
-            <Route path="/forgetpassword" component={Forget_password}/>
+            <PrivateRouteToFirst path="/test" component={Test}/>
         </Switch>
     </Router>
     </AuthProvider>
