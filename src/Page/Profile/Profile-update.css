@@ -3,7 +3,7 @@
     margin-top: 9vh;
     padding: 10px;
     display: grid;
-    grid-template-rows: 2fr 7fr;
+    grid-template-rows: 9fr;
 }
 .Update_profile__avatar{
     margin-top: -5vh;
@@ -15,8 +15,7 @@
 }
 .Update_profile-input >form{
     display: grid;
-    grid-template-rows: repeat(6,1fr) 1fr;
-    row-gap: 20px;
+   
 }
 .Update_profile-input{
     display: grid;
@@ -38,7 +37,15 @@
     outline: none;
   
 }
-
+.Update_profile_form{
+   display: grid;
+}
+.Update_profile_form label {
+    align-self: center;
+    padding-left: 16vw;
+    color: white;
+    margin: 2px;
+}
 .Update_profile__text:hover{
     box-shadow: 0px 10px 10px rgba(252, 252, 252, 0.25);
 
@@ -55,10 +62,14 @@
     padding: 5px;
     justify-self: center;
     align-self: center;
-    height: 60px;
+    height: 50px;
     box-shadow: 0px 4px 4px rgba(252, 252, 252, 0.25);
 }
 .Update_profile-input form button:hover {
     /* border:  3px solid white; */
     box-shadow: 0px 10px 10px rgba(252, 252, 252, 0.25);
+}
+#email{
+    background-color: rgb(27, 26, 26);
+    color: white;
 }

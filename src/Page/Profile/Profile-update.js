@@ -5,16 +5,14 @@ import "./Profile-update.css";
 import { PhotoCamera } from "@material-ui/icons";
 import { AuthContext } from "../../helper/Auth";
 import app from "../../helper/firebase"
-// import firebase from 'firebase/app'
+import firebase from 'firebase/app'
 const db = app.firestore()
-
 export default function Update_profile() {
-
-
   document.body.style.backgroundColor = "#444950";
   document.title = "Update Profile";
   const [update, setUpdate] = useState(false);
   const { currentUser } = useContext(AuthContext);
+  const users = db.collection('users').doc(currentUser.uid)
   const [data, setData] = useState({
     username: '',
     about: '',
@@ -22,24 +20,12 @@ export default function Update_profile() {
     number: '',
     email: '',
     website: '',
-    userpic:''
+    userpic: ''
   });
-  // .collection('myCollection')
-  // .document(documentId)
-  // .collection('post')
-  // .snapshots()
 
-  // const [uid, setUid] = useState("")
-  // useEffect(() => {
-  //     setUid(currentUser.uid)
 
-  // }, [currentUser])
-  // console.log(uid)
   useEffect(() => {
     db.collection('users').doc(currentUser.uid).onSnapshot(e => {
-      // setPosts(snapshot.doc(doc => ({ id: doc.id, data: doc.data()
-      //  console.log(e.data())
-      // })));
       setData({
         username: e.data().username,
         about: e.data().about,
@@ -47,12 +33,12 @@ export default function Update_profile() {
         number: e.data().number,
         email: e.data().email,
         website: e.data().website,
-        userpic:e.data().userpic
+        userpic: e.data().userpic
       })
-    setUpdate(false);
+      setUpdate(false);
 
     })
-  }, [currentUser.uid,update])
+  }, [currentUser.uid, update])
 
 
 
@@ -64,10 +50,30 @@ export default function Update_profile() {
     });
   }
 
-
+  // console.log(data)
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data);
+  
+   users.update({
+     username:data.username,
+     about: data.about,
+     hobby: data.hobby,
+     number: data.number,
+     email: data.email,
+     website: data.website,
+     userpic: data.userpic,
+     updatedAt:firebase.firestore.FieldValue.serverTimestamp(),
+
+   })
+   setData({
+    username: '',
+    about: '',
+    hobby: '',
+    number: '',
+    email: '',
+    website: '',
+    userpic: ''
+  })
     setUpdate(true);
   }
 
@@ -103,19 +109,40 @@ export default function Update_profile() {
             />
           </Badge>
         </div>
+        
         <div className="Update_profile-input">
+
           <form onSubmit={handleSubmit} noValidate>
-            <input placeholder="Full Name" type="text" name="username" value={data.username} onChange={handleChange} className="Update_profile__text" />
-            <input placeholder="About" type="text" name="about" value={data.about} onChange={handleChange} className="Update_profile__text" />
-            <input placeholder="Hobby" type="text" name="hobby" value={data.hobby} onChange={handleChange} className="Update_profile__text" />
-            <input placeholder="Contact Number" pattern="[0-9]" type="text" name="number" value={data.number} onChange={handleChange} className="Update_profile__text" />
-            <input disabled placeholder="Email" name="email" value={data.email} className="Update_profile__text" />
-            <input placeholder="Website" type="text" name="website" value={data.website} onChange={handleChange} className="Update_profile__text" />
             
+            <div className="Update_profile_form">
+            <label for="name">👤 Name</label>
+            <input id="name" placeholder="👤 Full Name" type="text" name="username" value={data.username} onChange={handleChange} className="Update_profile__text" />
+            </div>
+            <div className="Update_profile_form">
+            <label for="about">📕 About</label>
+            <input id="about" type="text" placeholder="📕 About" type="text" name="about" value={data.about} onChange={handleChange} className="Update_profile__text" />
+            </div>
+            <div className="Update_profile_form">
+            <label for="hobby">👞 Hobby</label>
+            <input id="hobby" placeholder="👞 Hobby" type="text" name="hobby" value={data.hobby} onChange={handleChange} className="Update_profile__text" />
+            </div>
+            <div className="Update_profile_form">
+            <label for="number">📞 Mobile Number</label>
+            <input id="number" placeholder="📞 Mobile Number" pattern="[0-9]" type="text" name="number" value={data.number} onChange={handleChange} className="Update_profile__text" />
+            </div>
+            <div className="Update_profile_form">
+            <label for="email">📧 Email</label>
+            <input id="email" disabled placeholder="Email" name="email" value={data.email} className="Update_profile__text" />
+            </div>
+            <div className="Update_profile_form">
+            <label for="website" for="name">🌐 Website</label>
+            <input id="website" placeholder="🌐 website" type="text" name="website" value={data.website} onChange={handleChange} className="Update_profile__text" />
+            </div>
+
             <button type="submit" >
               Update
             </button>
-            
+
           </form>
         </div>
       </div>

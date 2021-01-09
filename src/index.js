@@ -17,6 +17,7 @@ import Forget_password from './Page/Forget_password/Forget_password';
 import PrivateRouteToLogin from './helper/PrivateRouteToLogin'
 import PrivateRouteToFirst from './helper/PrivateRouteToFirst'
 import Test from './Page/Test/Test';
+import Album from './Page/Album/Album';
 const routing = (
     <AuthProvider> 
     <Router>
@@ -31,6 +32,7 @@ const routing = (
             <PrivateRouteToLogin path="/explore" component={Explore}/>
             <PrivateRouteToLogin path="/feed" component={Feeds}/>
             <PrivateRouteToLogin path="/profile" component={Profile}/>
+            <PrivateRouteToLogin path="/album" component={Album}/>
             <PrivateRouteToFirst path="/home" component={Main}/>
             <PrivateRouteToFirst path="/post" component={Post}/>
             <PrivateRouteToFirst path="/test" component={Test}/>

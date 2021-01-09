@@ -35,6 +35,7 @@ document.title = "Sign Up";
                 number: '',
                 website: '',
                 userpic:'',
+                updatedAt:firebase.firestore.FieldValue.serverTimestamp(),
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
               
             });         
