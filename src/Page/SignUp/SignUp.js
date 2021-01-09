@@ -30,6 +30,11 @@ document.title = "Sign Up";
             return db.collection('users').doc(cred.user.uid).set({
                 username:name,
                 email:email,
+                about: '',
+                hobby: '',
+                number: '',
+                website: '',
+                userpic:'',
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
               
             });         

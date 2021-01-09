@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../Component/Footer/Footer";
 import Header from "../../Component/Header/Header";
 // import Story from "../../Component/Story/Story";
-import StoryBox from "../../Component/Story/StoryBox";
+// import StoryBox from "../../Component/Story/StoryBox";
 import './Feeds.css'
 export default function Feeds() {
   document.title ="Feeds"

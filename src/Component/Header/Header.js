@@ -3,15 +3,12 @@ import "./Header.css";
 import { useHistory } from 'react-router-dom';
 import logo from "./imge/logo.png";
 import HomeIcon from "@material-ui/icons/Home";
-import { IconButton } from "@material-ui/core";
+// import { IconButton } from "@material-ui/core";
 export default function Header_New({ titile }) {
   // document.title ="Home"
   // document.body.style.backgroundColor = "black"
   const history = useHistory();
-  const gotoHome = () =>{
-      // console.log("Hello")
-      history.push("/home");
-  }
+
   return (
     <div className="Header_New_Eelements">
 
@@ -20,7 +17,7 @@ export default function Header_New({ titile }) {
       </div>
 
       <div className="Header_center">
-        <p style={{ color: "#39FF14",fontSize: "5vh" }}> {titile} </p>
+        <p style={{ color: "#39FF14"}}> {titile} </p>
       </div>
       <div className="Header__right">
       <HomeIcon

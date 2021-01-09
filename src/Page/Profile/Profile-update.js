@@ -1,38 +1,61 @@
 import { Avatar, Badge, IconButton } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import "./Profile-update.css";
 import { PhotoCamera } from "@material-ui/icons";
+import { AuthContext } from "../../helper/Auth";
 import app from "../../helper/firebase"
 // import firebase from 'firebase/app'
 const db = app.firestore()
-const user = app.auth().currentUser;
 
 export default function Update_profile() {
+
+
   document.body.style.backgroundColor = "#444950";
   document.title = "Update Profile";
-  
-  // .collection('myCollection')
-  // .document(documentId)
-  // .collection('post')
-  // .snapshots()
-  const [posts, setPosts] = useState([])
-  useEffect(() => {
-      db.collection('users').onSnapshot(snapshot => {
-          setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data()
-          })));
-      })
-  }, [])
-
-console.log(posts)
+  const [update, setUpdate] = useState(false);
+  const { currentUser } = useContext(AuthContext);
   const [data, setData] = useState({
     username: '',
     about: '',
     hobby: '',
     number: '',
     email: '',
-    website: ''
+    website: '',
+    userpic:''
   });
+  // .collection('myCollection')
+  // .document(documentId)
+  // .collection('post')
+  // .snapshots()
+
+  // const [uid, setUid] = useState("")
+  // useEffect(() => {
+  //     setUid(currentUser.uid)
+
+  // }, [currentUser])
+  // console.log(uid)
+  useEffect(() => {
+    db.collection('users').doc(currentUser.uid).onSnapshot(e => {
+      // setPosts(snapshot.doc(doc => ({ id: doc.id, data: doc.data()
+      //  console.log(e.data())
+      // })));
+      setData({
+        username: e.data().username,
+        about: e.data().about,
+        hobby: e.data().hobby,
+        number: e.data().number,
+        email: e.data().email,
+        website: e.data().website,
+        userpic:e.data().userpic
+      })
+    setUpdate(false);
+
+    })
+  }, [currentUser.uid,update])
+
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({
@@ -44,26 +67,11 @@ console.log(posts)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    user.updateProfile({
-      displayName: data.username
-    }).then(function () {
-      // Update successful.
-      console.log("Success")
-    }).catch(function (error) {
-      // An error happened.
-      console.log(error)
-    });
-    setData({
-      username: '',
-      about: '',
-      hobby: '',
-      number: '',
-      email: '',
-      website: ''
-    })
+    console.log(data);
+    setUpdate(true);
   }
 
- 
+
   return (
     <>
       <Header titile="Update profile" />
@@ -89,9 +97,9 @@ console.log(posts)
           >
             <Avatar
               // className="Update_profile__Avatar__main"
-              style={{ height: '80px', width: '80px' }}
+              style={{ height: '100px', width: '100px' }}
               alt="Update_profile pic"
-              src="https://scontent-maa2-2.xx.fbcdn.net/v/t1.0-9/89942220_2385737541646997_3575095416724652032_o.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=vgsb74Ae3FkAX-6PJvb&_nc_ht=scontent-maa2-2.xx&oh=c37c3d971a66b5c49a45e60867ab7ca5&oe=6012660E"
+              src={data.userpic}
             />
           </Badge>
         </div>
@@ -103,9 +111,11 @@ console.log(posts)
             <input placeholder="Contact Number" pattern="[0-9]" type="text" name="number" value={data.number} onChange={handleChange} className="Update_profile__text" />
             <input disabled placeholder="Email" name="email" value={data.email} className="Update_profile__text" />
             <input placeholder="Website" type="text" name="website" value={data.website} onChange={handleChange} className="Update_profile__text" />
-            <button type="submit" className="Update_profile__button">
+            
+            <button type="submit" >
               Update
             </button>
+            
           </form>
         </div>
       </div>
