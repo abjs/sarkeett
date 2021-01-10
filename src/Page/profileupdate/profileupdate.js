@@ -1,8 +1,10 @@
 import { Avatar, Badge } from "@material-ui/core";
+import { motion } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import "./profileupdate.css";
 import { AuthContext } from "../../helper/Auth";
+// import Test from './CircularProgressWithLabel'
 import useStorage from "./useStorage";
 import { PhotoCamera } from "@material-ui/icons";
 import app from "../../helper/firebase";
@@ -114,9 +116,10 @@ export default function Update_profile() {
 
   function ProgressBar({ file, setFile }) {
     const { url, progress } = useStorage(file);
-    console.log(progress);
+    console.log(progress)
     useEffect(() => {
       if (url) {
+        
         currentUser.updateProfile({
           photoURL: url,
         });
@@ -129,9 +132,16 @@ export default function Update_profile() {
         // users.update({userpic ,updatedAt})
         setFile(null);
       }
-    }, [url, setFile]);
-    return <div></div>;
-  }
+    }, [url,setFile]);
+    return (
+      <motion.div
+        className="progress-bar"
+        initial={{ width: 0 }}
+        animate={{ width: progress + "%" }}
+      ></motion.div>
+    );
+  };
+  
 
   return (
     <>
@@ -156,8 +166,9 @@ export default function Update_profile() {
                     />
                     <PhotoCamera />
                   </label>
+        {file && <ProgressBar file={file} setFile={setFile} />}
+
                 </form>
-                {file && <ProgressBar file={file} setFile={setFile} />}
               </>
             }
           >
@@ -169,11 +180,13 @@ export default function Update_profile() {
               src={data.userpic}
             />
           </Badge>
+         
           {/* <CircularProgress /> */}
           {/* <CircularProgressWithLabel value={50} /> */}
         </div>
 
         <div className="Update_profile-input">
+        
           <form onSubmit={handleSubmit} noValidate>
             <div className="Update_profile_form">
               <label htmlFor="name">👤 Name</label>

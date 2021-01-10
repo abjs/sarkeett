@@ -1,24 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import PropTypes from 'prop-types';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import { makeStyles } from '@material-ui/core/styles';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-function CircularProgressWithLabel(props) {
+function LinearProgressWithLabel(props) {
   return (
-    <Box position="relative" display="inline-flex">
-      <CircularProgress variant="determinate" {...props} />
-      <Box
-        top={0}
-        left={0}
-        bottom={0}
-        right={0}
-        position="absolute"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Typography variant="caption" component="div" color="textSecondary">{`${Math.round(
+    <Box display="flex" alignItems="center">
+      <Box width="100%" mr={1}>
+        <LinearProgress variant="determinate" {...props} />
+      </Box>
+      <Box minWidth={35}>
+        <Typography variant="body2" color="textSecondary">{`${Math.round(
           props.value,
         )}%`}</Typography>
       </Box>
@@ -26,25 +20,36 @@ function CircularProgressWithLabel(props) {
   );
 }
 
-CircularProgressWithLabel.propTypes = {
+LinearProgressWithLabel.propTypes = {
   /**
-   * The value of the progress indicator for the determinate variant.
+   * The value of the progress indicator for the determinate and buffer variants.
    * Value between 0 and 100.
    */
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic() {
-  const [progress, setProgress] = React.useState(10);
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+  },
+});
 
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
-    }, 800);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+export default function LinearWithValueLabel({x}) {
+  const classes = useStyles();
+  // const [progress, setProgress] = useState(0);
+  // setProgress(x)
+  // React.useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
+  //   }, 800);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
 
-  return <CircularProgressWithLabel value={progress} />;
+  return (
+    <div className={classes.root}>
+      <LinearProgressWithLabel value={x} />
+    </div>
+  );
 }
