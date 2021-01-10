@@ -7,7 +7,7 @@ import Settings from "./Page/Settings/Settings";
 import App from "./App";
 import Feeds from "./Page/Feeds/Feeds";
 import Explore from "./Page/Explore/Explore";
-import Profile from "./Page/Profile/Profile-update";
+import Profileupdate from "./Page/profileupdate/profileupdate";
 import Page from "./Page/Page";
 import Main from "./Page/Main/Main";
 import Login from "./Page/Login/Login";
@@ -31,7 +31,7 @@ const routing = (
         <PrivateRouteToFirst path="/settings" component={Settings} />
         <PrivateRouteToLogin path="/explore" component={Explore} />
         <PrivateRouteToLogin path="/feed" component={Feeds} />
-        <PrivateRouteToLogin path="/profile" component={Profile} />
+        <PrivateRouteToLogin path="/profileupdate" component={Profileupdate} />
         <PrivateRouteToLogin path="/album" component={Album} />
         <PrivateRouteToFirst path="/home" component={Main} />
         <PrivateRouteToFirst path="/post" component={Post} />

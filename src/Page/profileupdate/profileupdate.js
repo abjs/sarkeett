@@ -1,15 +1,13 @@
 import { Avatar, Badge } from "@material-ui/core";
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
-import "./Profile-update.css";
+import "./profileupdate.css";
 import { AuthContext } from "../../helper/Auth";
 import useStorage from "./useStorage";
 import { PhotoCamera } from "@material-ui/icons";
-
 import app from "../../helper/firebase";
 import firebase from "firebase/app";
 const db = app.firestore();
-
 export default function Update_profile() {
   document.body.style.backgroundColor = "#444950";
   document.title = "Update Profile";
@@ -18,8 +16,6 @@ export default function Update_profile() {
   const [error, setError] = useState(null);
   const { currentUser } = useContext(AuthContext);
   const types = ["image/png", "image/jpeg", "image/gif", "image/webp"];
-  const [url, seturl] = useState("");
-
   const users = db.collection("users").doc(currentUser.uid);
   const [data, setData] = useState({
     username: "",
@@ -121,7 +117,6 @@ export default function Update_profile() {
     console.log(progress);
     useEffect(() => {
       if (url) {
-        seturl(url);
         currentUser.updateProfile({
           photoURL: url,
         });
@@ -174,6 +169,8 @@ export default function Update_profile() {
               src={data.userpic}
             />
           </Badge>
+          {/* <CircularProgress /> */}
+          {/* <CircularProgressWithLabel value={50} /> */}
         </div>
 
         <div className="Update_profile-input">

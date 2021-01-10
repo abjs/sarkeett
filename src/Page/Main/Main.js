@@ -50,7 +50,7 @@ export default function Main() {
             <div onClick={() => { history.push("/post") }} className="main__Icon__button__elament" id="Main_btn4">
               <ControlPointIcon  style={{ fontSize:60 }} />
             </div>
-            <div onClick={() => { history.push("/profile") }} className="main__Icon__button__elament" id="Main_btn5">
+            <div onClick={() => { history.push("/profileupdate") }} className="main__Icon__button__elament" id="Main_btn5">
               <AccountCircleIcon  style={{ fontSize:60 }} />
             </div>
             <div onClick={() => { history.push("/settings") }} className="main__Icon__button__elament" id="Main_btn6">
