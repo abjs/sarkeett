@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Page.css";
 export default function Page() {
-document.title = "Site Map";
+  document.title = "Site Map";
   return (
     <>
       <div className="Page_div">
@@ -17,8 +17,8 @@ document.title = "Site Map";
           </Link>
         </div>
         <div className="page-btn">
-          <Link className="page-btn" to="/feed">
-          Feeds
+          <Link className="page-btn" to="/feed">ḍ
+            Feeds
           </Link>
         </div>
         <div className="page-btn">
@@ -43,17 +43,17 @@ document.title = "Site Map";
         </div>
         <div className="page-btn">
           <Link className="page-btn" to="/signup">
-          Sign Up
+            Sign Up
           </Link>
         </div>
         <div className="page-btn">
           <Link className="page-btn" to="/post">
-          Post
+            Post
           </Link>
         </div>
         <div className="page-btn">
           <Link className="page-btn" to="/forgetpassword">
-          Forget password
+            Forget password
           </Link>
         </div>
       </div>

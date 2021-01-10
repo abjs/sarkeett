@@ -1,30 +1,25 @@
-import React, { useContext, useEffect } from 'react';
-import useStorage from '../Album/hooks/useStorage';
-import { AuthContext } from "../../helper/Auth";
-import firebase from 'firebase/app'
-import app from "../../helper/firebase"
-const db = app.firestore()
+import React, { useEffect } from "react";
+import useStorage from "./useStorage";
+// import { AuthContext } from "../../helper/Auth";
+// import { timestamp } from '../../helper/firebase';
+// import app from "../../helper/firebase"
+// const db = app.firestore()
 const ProgressBar = ({ file, setFile }) => {
-  const { progress, url } = useStorage(file);
-  console.log(progress,url)
-  const { currentUser } = useContext(AuthContext);
-  const users = db.collection('users').doc(currentUser.uid)
-
+  const { url } = useStorage(file);
+  // console.log(progress)
+  // console.log(progress,url)
+  // const { currentUser } = useContext(AuthContext);
+  // const users = db.collection('users').doc(currentUser.uid)
   useEffect(() => {
     if (url) {
-      users.update({
-          userpic: url,
-          updatedAt:firebase.firestore.FieldValue.serverTimestamp(),
-        })
-      
-      
+      // const userpic = url;
+      // const updatedAt=timestamp();
+      // users.update({userpic ,updatedAt})
       setFile(null);
     }
-  }, [url, users,setFile]);
+  }, [url, setFile]);
 
-  return (
-    <></>
-  );
-} 
+  return <></>;
+};
 
 export default ProgressBar;

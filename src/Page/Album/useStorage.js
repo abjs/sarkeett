@@ -13,7 +13,7 @@ const useStorage = (file) => {
     setuid(currentUser.uid)
    
   }, [currentUser])
-  console.log(uid,currentUser.photoURL)
+  // console.log(uid,currentUser.photoURL)
   useEffect(() => {
     // references
     const storageRef = projectStorage.ref(file.name);

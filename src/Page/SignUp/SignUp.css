@@ -1,184 +1,165 @@
-.SignUp__left__2 p  {
-    text-transform: uppercase;
-    font-family: Oxanium;
-    color: #39FF14;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 35px;
-    text-align: center
+.SignUp__left__2 p {
+  text-transform: uppercase;
+  font-family: Oxanium;
+  color: #39ff14;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  text-align: center;
 }
-.SignUp__left__2 h3  {
-    text-transform: capitalize;
-    font-family: Oxanium;
-    color: #39FF14;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 25px;
-    text-align: center
+.SignUp__left__2 h3 {
+  text-transform: capitalize;
+  font-family: Oxanium;
+  color: #39ff14;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
 }
 
-.SignUp__left{
-    height: 100vh;
-    width: 40vw;
-    display: grid;
-    grid-template-rows: 1fr 5fr ;
-    align-content: center;
-    justify-content: center;
+.SignUp__left {
+  height: 100vh;
+  width: 40vw;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  align-content: center;
+  justify-content: center;
 }
 .SignUp__left__1 {
-    
-    justify-self: start;
+  justify-self: start;
 }
-.SignUp__left__1  img{
-    
-    height: 20vh;
+.SignUp__left__1 img {
+  height: 20vh;
 }
 .SignUp__left__2 {
-    
-    align-self: center
-
+  align-self: center;
 }
-.SignUp__left__3{
-    
-    align-self: center
-
+.SignUp__left__3 {
+  align-self: center;
 }
 
-
-
-.SignUp__App{
-    display: flex;
+.SignUp__App {
+  display: flex;
 }
 
-
-
-
-
-.SignUp__right{
-    display: grid;
-    height: 100vh;
-    width: 60vw;
-    background-color: gray
+.SignUp__right {
+  display: grid;
+  height: 100vh;
+  width: 60vw;
+  background-color: gray;
 }
-.SignUp__right_contaner{
-    height: 90vh;
-    width: 50vh;
-    min-height: 700px;
-    min-width: 500px;
+.SignUp__right_contaner {
+  height: 90vh;
+  width: 50vh;
+  min-height: 700px;
+  min-width: 500px;
 
-    border: 2px solid #39FF14;
-    border-radius:   40px ;
-    background-color: white;
-    justify-self: center;
-    align-self: center;
-    display: grid;
-    padding: 20px;
-    grid-template-rows: 1fr 1fr 7fr 1fr .8fr;
-
+  border: 2px solid #39ff14;
+  border-radius: 40px;
+  background-color: white;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  padding: 20px;
+  grid-template-rows: 1fr 1fr 7fr 1fr 0.8fr;
 }
-.SignUp__right_contaner__form{
-    display: grid;
-    grid-template-rows: 1fr .2fr 1fr .2fr 1fr .2fr 1fr .2fr 1fr  ;
-
+.SignUp__right_contaner__form {
+  display: grid;
+  grid-template-rows: 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
 }
-.SignUp__right_contaner__form_error{
-    padding-left: 50px;
-    color: red;
+.SignUp__right_contaner__form_error {
+  padding-left: 50px;
+  color: red;
 }
-.SignUp__right_contaner__form_error >p{
-    font-weight: bold;
+.SignUp__right_contaner__form_error > p {
+  font-weight: bold;
 }
-.SignUp__right_contaner_con0 img{
-    height: 15vh;
+.SignUp__right_contaner_con0 img {
+  height: 15vh;
 }
-.SignUp__right_contaner_con0{
-    justify-self: center;
-    align-self:  center;
+.SignUp__right_contaner_con0 {
+  justify-self: center;
+  align-self: center;
 }
-.SignUp__right_contaner_con1{
-   
-    width: 80%;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    font-family: Oxanium;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 37px;
-    align-items: center;
-    justify-content: center;    
+.SignUp__right_contaner_con1 {
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  font-family: Oxanium;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  align-items: center;
+  justify-content: center;
 }
 
-.SignUp__right_contaner_con2{
-    margin-top: 10px;
-    width: 80%;
-    justify-self: center;
-    background: #98FF85;
-    border: none;
-    padding: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.SignUp__right_contaner_con2 {
+  margin-top: 10px;
+  width: 80%;
+  justify-self: center;
+  background: #98ff85;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.SignUp__right_contaner_con3{
-    margin-top: 10px;
-    width: 80%;
-    justify-self: center;
-    background: #363C35;
-    outline: none;
-    border-radius: 30px 0;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-
+.SignUp__right_contaner_con3 {
+  margin-top: 10px;
+  width: 80%;
+  justify-self: center;
+  background: #363c35;
+  outline: none;
+  border-radius: 30px 0;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.SignUp__right_contaner_con6{
-    margin-top: 10px;
-    width: 80%;
-    justify-self: center;
-    background: darkslateblue;
-    outline: none;
-    border-radius:  30px ;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-
+.SignUp__right_contaner_con6 {
+  margin-top: 10px;
+  width: 80%;
+  justify-self: center;
+  background: darkslateblue;
+  outline: none;
+  border-radius: 30px;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.SignUp__right_contaner_con4{
-    padding: 10px;
-    justify-self: center;
-    font-size: 10px;
+.SignUp__right_contaner_con4 {
+  padding: 10px;
+  justify-self: center;
+  font-size: 10px;
 
-    text-align: center;
+  text-align: center;
 }
 
 @media only screen and (orientation: portrait) {
-    .SignUp__left  {
-        display: none;
-    }
-    .SignUp__right{
-        width: 100vw;
-    }
-    .SignUp__App{
-        flex-direction: column;
-
-    }
-    .SignUp__right_contaner{
-        height: 80%;
-        width: 80%; 
-    }
+  .SignUp__left {
+    display: none;
+  }
+  .SignUp__right {
+    width: 100vw;
+  }
+  .SignUp__App {
+    flex-direction: column;
+  }
+  .SignUp__right_contaner {
+    height: 80%;
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .SignUp__left  {
-        display: none;
-    }
-    .SignUp__right{
-        width: 100vw;
-    }
-    .SignUp__App{
-        flex-direction: column;
-
-    }
-    .SignUp__right_contaner{
-        height: 80%;
-        width: 80%; 
-    }
+  .SignUp__left {
+    display: none;
+  }
+  .SignUp__right {
+    width: 100vw;
+  }
+  .SignUp__App {
+    flex-direction: column;
+  }
+  .SignUp__right_contaner {
+    height: 80%;
+    width: 80%;
+  }
 }

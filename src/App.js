@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 // import Footer from './Component/Footer/Footer'
 // import Header from './Component/Header/Header'
-import './App.css';
+import "./App.css";
 // import Forget_password from './Page/Forget_password/Forget_password';
 // import Forget from './Page/Login/Login'
 // import SignUp from './Page/SignUp/SignUp'
 // import Login from './Page/Login/Login';
 // import Profile from './Page/Profile/Profile';
 // import Explore from './Page/Explore/Explore';
-import HomeInUp from './Page/HomeInUp/HomeInUp'
+import HomeInUp from "./Page/HomeInUp/HomeInUp";
 // import LoginForm from './Component/LoginForm/LoginForm'
 // import Settings from './Page/Settings/Settings'
 // import Page from './Page/Page'
@@ -29,7 +29,7 @@ export default function App() {
       {/* <Page/> */}
       {/* <Main/> */}
       {/* < Profile /> */}
-      <HomeInUp/>
+      <HomeInUp />
       {/* <Forget_password/> */}
       {/* <LoginForm/> */}
       {/* <Profile /> */}
@@ -39,10 +39,10 @@ export default function App() {
       {/* Feed */}
       {/* Explore  */}
       {/* <Profile/> */}
-  
+
       {/* <Settings/> */}
       {/* Chat  */}
       {/* Post */}
     </div>
-  )
+  );
 }
