@@ -2,16 +2,29 @@ import { Avatar, Badge } from "@material-ui/core";
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import "./Profile-update.css";
-import UploadForm from "./update__pic"
 import { AuthContext } from "../../helper/Auth";
+
+import { PhotoCamera } from "@material-ui/icons";
+import ProgressBar from './ProgressBar'
+
+
 import app from "../../helper/firebase"
 import firebase from 'firebase/app'
 const db = app.firestore()
+
+
+
+
 export default function Update_profile() {
   document.body.style.backgroundColor = "#444950";
   document.title = "Update Profile";
   const [update, setUpdate] = useState(false);
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState(null);
   const { currentUser } = useContext(AuthContext);
+  const types = ['image/png', 'image/jpeg','image/gif','image/webp'];
+
+
   const users = db.collection('users').doc(currentUser.uid)
   const [data, setData] = useState({
     username: '',
@@ -23,7 +36,18 @@ export default function Update_profile() {
     userpic: ''
   });
 
-
+  const handleChange_dp = (e) => {
+    let selected = e.target.files[0];
+  
+    if (selected && types.includes(selected.type)) {
+      setFile(selected);
+      setError('');
+    } else {
+      setFile(null);
+      setError('Please select an image file (png or jpg)');
+    }
+  };
+  if (error) alert(error);
   useEffect(() => {
     db.collection('users').doc(currentUser.uid).onSnapshot(e => {
       setData({
@@ -92,10 +116,13 @@ export default function Update_profile() {
             }}
             badgeContent={
               <>
-
-
-                <UploadForm />
-
+                <form>
+                  <label >
+                    <input style={ {display: "none"}} type="file" onChange={handleChange_dp} />
+                    <PhotoCamera />
+                  </label>
+                </form>
+                { file && <ProgressBar file={file} setFile={setFile} /> }
               </>
             }
           >
