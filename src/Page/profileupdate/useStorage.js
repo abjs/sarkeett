@@ -21,9 +21,9 @@ const useStorage = (file) => {
     // references
     const storageRef = projectStorage.ref(file.name);
     const collectionRef = projectFirestore
-      .collection("Dp")
+      .collection("dp")
       .doc(`${uid}`)
-      .collection("Images");
+      .collection("images");
     storageRef.put(file).on(
       "state_changed",
       (snap) => {
@@ -36,7 +36,7 @@ const useStorage = (file) => {
       async () => {
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
-        await collectionRef.add({ url, createdAt });
+        await collectionRef.add({ url, createdAt,userid:uid });
         setUrl(url);
       }
     );

@@ -5,3 +5,45 @@
 .error{
   color:  #ff4a4a;
 }
+.UploadForm__app{
+  height: 10vh;
+
+  /* text-align: center; */
+}
+
+.UplodeForom__input{
+    display: none;
+}
+
+.UploadForm__input__icon{
+  display: grid;
+  color: white;
+  background-color: black;
+  width: 70px;
+  height: 70px;
+  border: 5px solid grey;
+  border-radius: 30px;
+  margin:  auto;
+  /* justify-items: center; */
+  align-content: center;
+  justify-content: center;
+  transition: .8s;
+
+}
+.UploadForm__input__icon:hover{
+  color:black;
+  background-color:white;
+  margin-bottom: 10px;
+}
+.UploadForm__error{
+  margin-top: 10px;
+  text-align: center;
+}
+.UploadForm__filename{
+  text-align: center;
+}
+.Album__title__left{
+  justify-items: center;
+  align-content: center;
+  align-self: center;
+}
