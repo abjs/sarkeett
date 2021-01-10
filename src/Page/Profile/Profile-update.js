@@ -1,8 +1,8 @@
-import { Avatar, Badge, IconButton } from "@material-ui/core";
+import { Avatar, Badge } from "@material-ui/core";
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import "./Profile-update.css";
-import { PhotoCamera } from "@material-ui/icons";
+import UploadForm from "./update__pic"
 import { AuthContext } from "../../helper/Auth";
 import app from "../../helper/firebase"
 import firebase from 'firebase/app'
@@ -53,27 +53,27 @@ export default function Update_profile() {
   // console.log(data)
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-   users.update({
-     username:data.username,
-     about: data.about,
-     hobby: data.hobby,
-     number: data.number,
-     email: data.email,
-     website: data.website,
-     userpic: data.userpic,
-     updatedAt:firebase.firestore.FieldValue.serverTimestamp(),
 
-   })
-   setData({
-    username: '',
-    about: '',
-    hobby: '',
-    number: '',
-    email: '',
-    website: '',
-    userpic: ''
-  })
+    users.update({
+      username: data.username,
+      about: data.about,
+      hobby: data.hobby,
+      number: data.number,
+      email: data.email,
+      website: data.website,
+      userpic: data.userpic,
+      updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+
+    })
+    setData({
+      username: '',
+      about: '',
+      hobby: '',
+      number: '',
+      email: '',
+      website: '',
+      userpic: ''
+    })
     setUpdate(true);
   }
 
@@ -92,12 +92,10 @@ export default function Update_profile() {
             }}
             badgeContent={
               <>
-                <input accept="image/*" className="Update_profile__Avatar_input" id="icon-button-file" type="file" />
-                <label htmlFor="icon-button-file">
-                  <IconButton color="primary" aria-label="upload picture" component="span">
-                    <PhotoCamera />
-                  </IconButton>
-                </label>
+
+
+                <UploadForm />
+
               </>
             }
           >
@@ -109,34 +107,34 @@ export default function Update_profile() {
             />
           </Badge>
         </div>
-        
+
         <div className="Update_profile-input">
 
           <form onSubmit={handleSubmit} noValidate>
-            
+
             <div className="Update_profile_form">
-            <label for="name">👤 Name</label>
-            <input id="name" placeholder="👤 Full Name" type="text" name="username" value={data.username} onChange={handleChange} className="Update_profile__text" />
+              <label htmlFor="name">👤 Name</label>
+              <input id="name" placeholder="👤 Full Name" type="text" name="username" value={data.username} onChange={handleChange} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
-            <label for="about">📕 About</label>
-            <input id="about" type="text" placeholder="About"  name="about" value={data.about} onChange={handleChange} className="Update_profile__text" />
+              <label htmlFor="about">📕 About</label>
+              <input id="about" type="text" placeholder="📕 About" name="about" value={data.about} onChange={handleChange} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
-            <label for="hobby">👞 Hobby</label>
-            <input id="hobby" placeholder="👞 Hobby" type="text" name="hobby" value={data.hobby} onChange={handleChange} className="Update_profile__text" />
+              <label htmlFor="hobby">👞 Hobby</label>
+              <input id="hobby" placeholder="👞 Hobby" type="text" name="hobby" value={data.hobby} onChange={handleChange} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
-            <label for="number">📞 Mobile Number</label>
-            <input id="number" placeholder="📞 Mobile Number" pattern="[0-9]" type="text" name="number" value={data.number} onChange={handleChange} className="Update_profile__text" />
+              <label htmlFor="number">📞 Mobile Number</label>
+              <input id="number" placeholder="📞 Mobile Number" pattern="[0-9]" type="text" name="number" value={data.number} onChange={handleChange} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
-            <label for="email">📧 Email</label>
-            <input id="email" disabled placeholder="Email" name="email" value={data.email} className="Update_profile__text" />
+              <label htmlFor="email">📧 Email</label>
+              <input id="email" disabled placeholder="Email" name="email" value={data.email} className="Update_profile__text" />
             </div>
             <div className="Update_profile_form">
-            <label for="website">🌐 Website</label>
-            <input id="website" placeholder="🌐 website" type="text" name="website" value={data.website} onChange={handleChange} className="Update_profile__text" />
+              <label htmlFor="website" >🌐 Website</label>
+              <input id="website" placeholder="🌐 website" type="text" name="website" value={data.website} onChange={handleChange} className="Update_profile__text" />
             </div>
 
             <button type="submit" >
