@@ -116,10 +116,9 @@ export default function Update_profile() {
 
   function ProgressBar({ file, setFile }) {
     const { url, progress } = useStorage(file);
-    console.log(progress)
+    // console.log(progress);
     useEffect(() => {
       if (url) {
-        
         currentUser.updateProfile({
           photoURL: url,
         });
@@ -132,7 +131,7 @@ export default function Update_profile() {
         // users.update({userpic ,updatedAt})
         setFile(null);
       }
-    }, [url,setFile]);
+    }, [url, setFile]);
     return (
       <motion.div
         className="progress-bar"
@@ -140,8 +139,7 @@ export default function Update_profile() {
         animate={{ width: progress + "%" }}
       ></motion.div>
     );
-  };
-  
+  }
 
   return (
     <>
@@ -166,8 +164,22 @@ export default function Update_profile() {
                     />
                     <PhotoCamera />
                   </label>
-        {file && <ProgressBar file={file} setFile={setFile} />}
-
+                  {/* <input
+                      style={{ display: "none" }}
+                      accept="image/*"
+                      id="icon-button-file"
+                      type="file"
+                    />
+                    <IconButton
+                      onChange={handleChange_dp}
+                      color="primary"
+                      aria-label="upload picture"
+                      component="span"
+                    >
+                      <PhotoCamera />
+                    </IconButton>
+                  </label> */}
+                  {file && <ProgressBar file={file} setFile={setFile} />}
                 </form>
               </>
             }
@@ -180,13 +192,12 @@ export default function Update_profile() {
               src={data.userpic}
             />
           </Badge>
-         
+
           {/* <CircularProgress /> */}
           {/* <CircularProgressWithLabel value={50} /> */}
         </div>
 
         <div className="Update_profile-input">
-        
           <form onSubmit={handleSubmit} noValidate>
             <div className="Update_profile_form">
               <label htmlFor="name">👤 Name</label>
