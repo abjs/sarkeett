@@ -1,8 +1,7 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
-
 .Album {
   height: 100vh;
   background: url("albumbackground.jpg");
@@ -10,4 +9,4 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
+} */

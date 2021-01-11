@@ -1,8 +1,11 @@
 import React from 'react'
-import './CreateStoryBox.css'
-export default function CreateStoryBox({bgImage}) {
+import './StoryBox.css'
+export default function StoryBox({bgImage}) {
     return (
         <div className="StoryBox" style={{backgroundImage:`url(${bgImage})`}}>
+
+            
+            
         </div>
     )
 }
