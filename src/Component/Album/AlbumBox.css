@@ -3,10 +3,8 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* width: 120px;
-    height:200px; */
-    width: 15vw;
-    height:15vw;
+    width: 120px;
+    height:200px;
     box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.75);
     border-radius: 20px;
     margin-right: 10px;
@@ -15,11 +13,4 @@
 }
 .StoryBox:hover{
     transform:scale(1.07)
-}
-@media only screen and (orientation: portrait) {
-
-    .StoryBox{
-        width: 15vh;
-        height:15vh;
-    }
 }

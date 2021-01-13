@@ -20,3 +20,7 @@
 .Album__main{
   height: 90vh;
 }
+.Album__main{
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+}

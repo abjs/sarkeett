@@ -1,0 +1,63 @@
+.Images__app >div{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(10,1fr); */
+    grid-template-columns: repeat(10,2fr);
+    gap: 10px;;
+}
+.Images__app{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+
+}
+.Image__app__img{
+    max-height: 100vh;
+    min-width: 100vw;
+    box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+    transition: transform .8s;
+}
+.Image__app__img:hover{
+    transform: scale(.8);
+}
+@media screen and (min-width: 320px) {
+    .Images__app >div{
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (min-width: 480px) {
+    .Images__app >div{
+    grid-template-columns: repeat(4,1fr);
+    }
+}
+@media screen and (min-width: 600px) {
+    .Images__app >div{
+    grid-template-columns: repeat(5,1fr);
+    }
+}
+@media screen and (min-width: 768px) {
+    .Images__app >div{
+    grid-template-columns: repeat(6,1fr);
+    }
+}
+@media screen and (min-width: 900px) {
+    .Images__app >div{
+    grid-template-columns: repeat(7,1fr);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .Images__app >div{
+    grid-template-columns: repeat(8,1fr);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .Images__app >div{
+    grid-template-columns: repeat(9,1fr);
+    }
+}

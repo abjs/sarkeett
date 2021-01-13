@@ -1,15 +1,13 @@
 import React from 'react'
 import './AlbumLargImg.css'
 export default function AlbumLargImg({bgImage}) {
-  const  backgroundImage = {
+//   const  backgroundImage = {
        
-    backgroundImage: 'url("'+bgImage+'")',
-}
+//     backgroundImage: 'url("'+bgImage+'")',
+// }
     return (
       <div className="AlbumLargImgs">
-        
-           <div className="AlbumLargImgsBg" style={backgroundImage}>
-           </div>
+        <img src={bgImage} alt="img"/>
       </div>  
        
         
