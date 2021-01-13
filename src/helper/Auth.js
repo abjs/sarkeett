@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import app from "./firebase";
+// import Container from "./lode"
+import {WaveLoading } from 'react-loadingg';
+
 export const AuthContext = React.createContext();
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
@@ -13,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   if(pending){
-    return <>Loading...</>
+    return <><WaveLoading/></>
   }
 
   return (
