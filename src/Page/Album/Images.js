@@ -11,13 +11,16 @@ const Images = () => {
   const [togg, settogg] = useState(false);
   const [alb, setalb] = useState(true);
   const [url, seturl] = useState("");
-
+  const  backgroundImage = {
+       
+    backgroundImage: 'url("'+url+'")',
+}
   return (
     <>
 
       <div id='Images__app' className="Images__app">
 
-      {togg && <img className="Image__app__img" src={url} alt="Full imge" />}
+      {togg && <div className="Image__app__img" style={backgroundImage} />}
 
         <OutsideClickHandler className="teat"
           onOutsideClick={() => {
