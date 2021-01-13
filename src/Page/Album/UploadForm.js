@@ -21,7 +21,7 @@ const UploadForm = () => {
       setError('Please select an image file (png or jpg)');
     }
   };
-  console.log(file)
+  // console.log(file)
   return (
     <form  className="UploadForm__app">
       <label className="UploadForm__lebel">

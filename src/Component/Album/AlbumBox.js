@@ -6,10 +6,6 @@ export default function AlbumBox({bgImage}) {
         backgroundImage: 'url("'+bgImage+'")',
     }
     return (
-
- 
-
-
         <div className="StoryBox" style={backgroundImage}>
         </div>
     )

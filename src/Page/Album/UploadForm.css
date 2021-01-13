@@ -7,8 +7,6 @@
 }
 .UploadForm__app{
   height: 10vh;
-
-  /* text-align: center; */
 }
 
 .UplodeForom__input{
@@ -27,8 +25,7 @@
   /* justify-items: center; */
   align-content: center;
   justify-content: center;
-  transition: .8s;
-
+  transition: 1s;
 }
 .UploadForm__input__icon:hover{
   color:black;
