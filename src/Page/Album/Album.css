@@ -2,12 +2,21 @@
   margin: 0;
   padding: 0;
 }
-
-.Album {
+/* .Album {
   height: 100vh;
   background: url("albumbackground.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+} */
+.Album{
+  height: 100vh;
+  width: 100vw;
+}
+.Album__uploded{
+  height: 10vh;
+}
+.Album__main{
+  height: 90vh;
 }
