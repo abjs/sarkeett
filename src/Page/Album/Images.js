@@ -4,7 +4,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import AlbumBox from "../../Component/Album/AlbumBox";
 import useFirestore from "./useFirestore";
 import "./Images.css";
-import AlbumLargImg from "../../Component/Album/AlbumLargImg";
+// import AlbumLargImg from "../../Component/Album/AlbumLargImg";
 
 const Images = () => {
   const { docs } = useFirestore("images");
