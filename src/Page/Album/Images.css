@@ -2,10 +2,9 @@
     display: grid;
     align-content: center;
     justify-content: center;
-    /* grid-template-columns: repeat(10,1fr); */
-    grid-template-columns: repeat(10,2fr);
-    gap: 10px;;
+    gap: 10px;
 }
+
 .Images__app{
   display: grid;
   justify-content: center;
@@ -13,28 +12,87 @@
   width: 100vw;
 
 }
-.Image__app__img{
-    /* max-height: 100vh; */
-    min-width: 80vw;
-    /* width: 100%;
-    height: 100%; */
+.Images__app_image{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100vw;
     height: 100vh;
+}
+.Images__app_image{
+    background-color:rgb(255, 255, 255);
+    height: 100vh;
+    margin-bottom: -10vh;
+}
+.Image__app__img__left{
+    height: 100vh;
+    width: 10vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.Image__app__img__right{
+    height: 100vh;
+    width: 10vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.Image__app__img__midd{
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+
+.IconButton__close{
+    background-color:black;
+    color:white;
+    border-radius:10px;
+    transition: transform .1s;
+    transform: scale(1);
+     
+}
+.IconButton__img{
+    background-color:white;
+    color:black;
+    border-radius:10px;
+    transition: transform .1s;
+    transform: scale(1.4);
+     
+}
+.IconButton__close:hover{
+    background-color:white;
+    color:black;
+}
+.IconButton__img:hover{
+    background-color:black;
+    color:white;
+    transform: scale(1.5);
+
+}
+
+.Image__app__img{
+    height: 90vh;
+    width: 70vw;
+    margin-top: 5vh;
     background-position: center center;
     background-size: cover;
-
     box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.75);
     border-radius: 50px;
     cursor: pointer;
-    justify-self: center;
-    align-self: center;
-    align-items: center;
-    justify-items: center;
-    transition: transform 1.5s;
-    transform: scale(.65);
-
+    transition: transform 1.5s; 
+     transform: scale(.9);
 }
+
+
+
+
 .Image__app__img:hover{
-    transform: scale(.9);
+    transform: scale(1.05);
 
 }
 @media screen and (min-width: 320px) {
