@@ -7,6 +7,8 @@
 }
 .UploadForm__app{
   height: 10vh;
+  padding-top: 10px;
+
 }
 
 .UplodeForom__input{
@@ -32,6 +34,26 @@
   background-color:white;
   margin-bottom: 10px;
 }
+.UploadForm__input__icon__home{
+  display: grid;
+  color: rgb(116, 93, 93);
+  background-color: black;
+  width: 70px;
+  height: 70px;
+  border: 5px solid grey;
+  border-radius: 30px;
+  margin:  auto;
+  /* justify-items: center; */
+  align-content: center;
+  justify-content: center;
+  transition: 1s;
+}
+
+.UploadForm__input__icon__home:hover{
+  color:black;
+  background-color:white;
+  
+}
 .UploadForm__error{
   margin-top: 10px;
   text-align: center;
@@ -43,4 +65,8 @@
   justify-items: center;
   align-content: center;
   align-self: center;
+}
+.UploadForm__icon{
+  display:flex;
+  justify-content: space-between;
 }
