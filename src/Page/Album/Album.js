@@ -9,17 +9,11 @@ export default function Album() {
   return (
     <div className="Album">
       <div id="album__uplodeForam" className="Album__uploded">
-
-      <UploadForm/> 
+        <UploadForm />
       </div>
-  
-      <div className="Album__main">
-
-             <Images/>
-             {/* <ImageGrid/> */}
-
+      <div id="Album__main" className="Album__main">
+        <Images />
       </div>
-     
     </div>
   );
 }
