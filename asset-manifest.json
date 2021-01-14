@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sarkeett/static/css/main.cf0a981a.chunk.css",
-    "main.js": "/sarkeett/static/js/main.b5dfe4b2.chunk.js",
-    "main.js.map": "/sarkeett/static/js/main.b5dfe4b2.chunk.js.map",
+    "main.css": "/sarkeett/static/css/main.c4722b54.chunk.css",
+    "main.js": "/sarkeett/static/js/main.de967672.chunk.js",
+    "main.js.map": "/sarkeett/static/js/main.de967672.chunk.js.map",
     "runtime-main.js": "/sarkeett/static/js/runtime-main.0f42061d.js",
     "runtime-main.js.map": "/sarkeett/static/js/runtime-main.0f42061d.js.map",
-    "static/js/2.8b712e84.chunk.js": "/sarkeett/static/js/2.8b712e84.chunk.js",
-    "static/js/2.8b712e84.chunk.js.map": "/sarkeett/static/js/2.8b712e84.chunk.js.map",
+    "static/js/2.b9302668.chunk.js": "/sarkeett/static/js/2.b9302668.chunk.js",
+    "static/js/2.b9302668.chunk.js.map": "/sarkeett/static/js/2.b9302668.chunk.js.map",
     "index.html": "/sarkeett/index.html",
-    "static/css/main.cf0a981a.chunk.css.map": "/sarkeett/static/css/main.cf0a981a.chunk.css.map",
-    "static/js/2.8b712e84.chunk.js.LICENSE.txt": "/sarkeett/static/js/2.8b712e84.chunk.js.LICENSE.txt",
+    "static/css/main.c4722b54.chunk.css.map": "/sarkeett/static/css/main.c4722b54.chunk.css.map",
+    "static/js/2.b9302668.chunk.js.LICENSE.txt": "/sarkeett/static/js/2.b9302668.chunk.js.LICENSE.txt",
     "static/media/HomeInUp.css": "/sarkeett/static/media/background.13d79538.png",
     "static/media/logo.94887919.png": "/sarkeett/static/media/logo.94887919.png",
     "static/media/logo.dac76985.png": "/sarkeett/static/media/logo.dac76985.png",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0f42061d.js",
-    "static/js/2.8b712e84.chunk.js",
-    "static/css/main.cf0a981a.chunk.css",
-    "static/js/main.b5dfe4b2.chunk.js"
+    "static/js/2.b9302668.chunk.js",
+    "static/css/main.c4722b54.chunk.css",
+    "static/js/main.de967672.chunk.js"
   ]
 }
